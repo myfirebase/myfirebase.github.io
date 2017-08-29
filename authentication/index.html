@@ -1,0 +1,1181 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Authentication - Myfirebase docs</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-1fcf5138d0.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="Myfirebase docs" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Functionalies
+                </span>
+              
+            
+            Authentication
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/myfirebase/myfirebase" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      myfirebase/myfirebase
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Myfirebase docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/myfirebase/myfirebase" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      myfirebase/myfirebase
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../directory-structure/" title="Directory Structure" class="md-nav__link">
+      Directory Structure
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Functionalies
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Functionalies
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Authentication
+      </label>
+    
+    <a href="./" title="Authentication" class="md-nav__link md-nav__link--active">
+      Authentication
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#auth-instance" title="Auth instance" class="md-nav__link">
+    Auth instance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-firebase-auth-module" title="Get Firebase Auth Module" class="md-nav__link">
+    Get Firebase Auth Module
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-current-user" title="Get current user" class="md-nav__link">
+    Get current user
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-profile-picture" title="Update Profile Picture" class="md-nav__link">
+    Update Profile Picture
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_2" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auth-state" title="Auth state" class="md-nav__link">
+    Auth state
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_3" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auth-check" title="Auth check" class="md-nav__link">
+    Auth check
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_4" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signup-with-email-and-password" title="Signup with email and password" class="md-nav__link">
+    Signup with email and password
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_5" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-email-and-password" title="SignIn with email and password" class="md-nav__link">
+    SignIn with email and password
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_6" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-google" title="SignIn with google" class="md-nav__link">
+    SignIn with google
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_7" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-facebook" title="SignIn with Facebook" class="md-nav__link">
+    SignIn with Facebook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-twitter" title="SignIn with Twitter" class="md-nav__link">
+    SignIn with Twitter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-github" title="SignIn with Github" class="md-nav__link">
+    SignIn with Github
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signout" title="SignOut" class="md-nav__link">
+    SignOut
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../storage/" title="Cloud Storage" class="md-nav__link">
+      Cloud Storage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#auth-instance" title="Auth instance" class="md-nav__link">
+    Auth instance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-firebase-auth-module" title="Get Firebase Auth Module" class="md-nav__link">
+    Get Firebase Auth Module
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-current-user" title="Get current user" class="md-nav__link">
+    Get current user
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-profile-picture" title="Update Profile Picture" class="md-nav__link">
+    Update Profile Picture
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_2" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auth-state" title="Auth state" class="md-nav__link">
+    Auth state
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_3" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auth-check" title="Auth check" class="md-nav__link">
+    Auth check
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_4" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signup-with-email-and-password" title="Signup with email and password" class="md-nav__link">
+    Signup with email and password
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_5" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-email-and-password" title="SignIn with email and password" class="md-nav__link">
+    SignIn with email and password
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_6" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-google" title="SignIn with google" class="md-nav__link">
+    SignIn with google
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_7" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-facebook" title="SignIn with Facebook" class="md-nav__link">
+    SignIn with Facebook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-twitter" title="SignIn with Twitter" class="md-nav__link">
+    SignIn with Twitter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signin-with-github" title="SignIn with Github" class="md-nav__link">
+    SignIn with Github
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signout" title="SignOut" class="md-nav__link">
+    SignOut
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Authentication</h1>
+                
+                <div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Before you begin, please check the <a href="https://firebase.google.com/docs/auth/web/start">firebase auth docs</a>.</p>
+</div>
+<p>How hard it is to integrate <strong>Firebase auth</strong> to your web project especially when you try to structure and orginize firebase auth globally to be used through all <strong>Vue components</strong>.</p>
+<p>Thanks to <strong>Myfirebase auth system</strong> which makes firebase auth easier to be managed using <strong>Vuex</strong>, the fireabse auth is injected and triggered at beginning of the Vue instance.</p>
+<hr>
+
+<h4 id="auth-instance">Auth instance</h4>
+<p>Syntax : <code>$auth</code></p>
+<p><code>$auth</code> is a global auth instance which called through Vue component.</p>
+<h5 id="example">Example</h5>
+<pre><code class="html">&lt;template&gt;
+    &lt;div class = &quot;container&quot;&gt;
+        &lt;!-- display result --&gt;
+        User Name : {{userName}}
+        Email :     {{userEmail}}
+    &lt;/div&gt;
+&lt;template&gt;
+
+&lt;script&gt;
+    export default {
+        mounted() {
+            // retrieve username.
+            this.userName = this.$auth.user().displayName
+            // retrieve user email.
+            this.userEmail = this.$auth.user().email
+        },
+        data() {
+            return {
+                userName: ''
+            }
+        }
+    }
+&lt;/script&gt;
+</code></pre>
+
+<p>Basically <code>$auth</code> instance is your key to get access and manage <strong>firebase auth</strong>.</p>
+<hr>
+
+<h4 id="get-firebase-auth-module">Get Firebase Auth Module</h4>
+<p>To retrieve firebase auth module.</p>
+<p>Syntax : <code>$auth.getAuth()</code></p>
+<hr>
+
+<h4 id="get-current-user">Get current user</h4>
+<p>You can get the current signed in user by calling global auth instance.</p>
+<p>Syntax : <code>$auth.getUser()</code></p>
+<h5 id="example_1">Example</h5>
+<pre><code class="html">&lt;script&gt;
+    export default {
+        mounted() {
+            // get current user
+            let user = this.$auth.getUser()
+            // get email
+            console.log(user.email)
+            // get username
+            console.log(user.displayName)
+        }
+    }
+&lt;/script&gt;
+</code></pre>
+
+<hr>
+
+<h4 id="update-profile-picture">Update Profile Picture</h4>
+<p>You can update profile pricture usign <code>updateProfilePicture(object)</code> method, this will update the default firebase user <strong>profileURL</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Before you start updating profile picture, make sure that you have uploaded that picture to firebase storage, and get photoURL, see <a href="">Upload a file with Myfirebase</a>.</p>
+</div>
+<p>Syntax : <code>$auth.updateProfilePicture(object)</code></p>
+<h5 id="example_2">Example</h5>
+<pre><code class="html">&lt;script&gt;
+    export default {
+        mounted () {
+
+        },
+        data () {
+            return {
+                // link to profile photo
+                picture: 'https://link-to-photo.test/profile.png'
+            }
+        },
+        methods:{
+            // update profile picture
+            updateProfilePicture() {
+                this.$auth.updateProfilePicture({
+                    // picture link
+                    ref: this.picture,
+                    result: () =&gt; {
+                        //updated
+                    },
+                    error: (error) =&gt; {
+                        console.log(error.message)
+                    }
+                })
+            }
+        }
+    }
+&lt;script&gt;
+</code></pre>
+
+<hr>
+
+<h4 id="auth-state">Auth state</h4>
+<p>Syntax : <code>$auth.state(object)</code></p>
+<p>Consider it just like a auth middleware where you can check if the user is signed in or not, you can also redirect user to an other component if he doesn't signed in.</p>
+<h5 id="example_3">Example</h5>
+<pre><code class="html">&lt;template&gt;
+    &lt;div class = &quot;container&quot;&gt;
+        &lt;!-- display result --&gt;
+        User Name : {{userName}}
+    &lt;/div&gt;
+&lt;template&gt;
+
+&lt;script&gt;
+    export default {
+        mounted() {
+            // Check if the user signed in with redirection. 
+            this.$auth.state({
+                forward: '',
+                redirect: '/login',
+                then: (user) =&gt; {
+                    this.userName = user.displayName 
+                },
+                catch: (error) =&gt; {
+                    console.log(error.message)
+                }
+            })
+        },
+        data() {
+            return {
+                userName: ''
+            }
+        }
+    }
+&lt;/script&gt;
+</code></pre>
+
+<hr>
+
+<h4 id="auth-check">Auth check</h4>
+<p>Just like <strong>auth state</strong> but without redirection.</p>
+<p>Syntax : <code>$auth.check(object)</code></p>
+<h5 id="example_4">Example</h5>
+<pre><code class="html">&lt;template&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+        &lt;li v-if = &quot;signed&quot; class=&quot;&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;{{userName}}&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                &lt;li&gt;&gt;Logout&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;template&gt;
+
+&lt;script&gt;
+    export default {
+        mounted() {
+            // Check if the user signed in without redirection. 
+            this.$auth.check({
+                then: (user) =&gt; {
+                    this.signed = true
+                    this.userName = user.displayName 
+                },
+                catch: (error) =&gt; {
+                    console.log(error.message)
+                }
+            })
+        },
+        data() {
+            return {
+                userName: '',
+                signed: false,
+            }
+        }
+    }
+&lt;/script&gt;
+</code></pre>
+
+<hr>
+
+<h4 id="signup-with-email-and-password">Signup with email and password</h4>
+<p>To register a new user with email and password.</p>
+<p>Synax : <code>$auth.registerWithEmailAndPassword(object)</code></p>
+<h5 id="example_5">Example</h5>
+<pre><code class="html">&lt;template&gt;
+    &lt;div class = &quot;register&quot;&gt;
+        &lt;input type=&quot;text&quot; v-mode=&quot;email&quot;&gt;
+        &lt;input type=&quot;password&quot; v-model=&quot;password&quot;&gt;
+        &lt;button @click=&quot;register&quot;&gt;&lt;/button&gt;
+    &lt;/div&gt;
+&lt;template&gt;
+
+&lt;script&gt;
+    export default {
+        mounted() {
+            // Check if the user signed in with redirection. 
+            this.$auth.state({
+                forward: '/app',
+                redirect: '/login',
+                then: (user) =&gt; {
+                    //
+                },
+                catch: (error) =&gt; {
+                    console.log(error.message)
+                }
+            })
+        },
+        data() {
+            return {
+                email: '',
+                password: '',
+            }
+        },
+        methods: {
+            registerWithEmailAndPassword(){
+                // register user with email and password
+                this.$auth.registerWithEmailAndPassword({
+                    email: this.email,
+                    password: this.password,
+                    result: (user) =&gt; {
+                        console.log(&quot;User Email : &quot; + user.email)
+                    },
+                    error: (error) =&gt; {
+                        console.log(error.message)
+                    }
+                });
+            }
+        }
+    }
+&lt;/script&gt;
+</code></pre>
+
+<hr>
+
+<h4 id="signin-with-email-and-password">SignIn with email and password</h4>
+<p>To signin a user with email and passowrd.</p>
+<p>Syntax : <code>$auth.loginWithEmailAndPassword(object)</code></p>
+<h5 id="example_6">Example</h5>
+<pre><code class="html">&lt;template&gt;
+    &lt;div class = &quot;register&quot;&gt;
+        &lt;input type=&quot;text&quot; v-mode=&quot;email&quot;&gt;
+        &lt;input type=&quot;password&quot; v-model=&quot;password&quot;&gt;
+        &lt;button @click=&quot;loginWithEmailAndPassword&quot;&gt;&lt;/button&gt;
+    &lt;/div&gt;
+&lt;template&gt;
+
+&lt;script&gt;
+    export default {
+        mounted() {
+            // Check if the user signed in with redirection. 
+            this.$auth.state({
+                forward: '/app',
+                redirect: '/login',
+                then: (user) =&gt; {
+                    //
+                },
+                catch: (error) =&gt; {
+                    console.log(error.message)
+                }
+            })
+        },
+        data() {
+            return {
+                email: '',
+                password: '',
+            }
+        },
+        methods: {
+            loginWithEmailAndPassword() {
+                // login with email and password
+                this.$auth.loginWithEmailAndPassword({
+                    email: this.email,
+                    password: this.password,
+                    result: (user) =&gt; {
+                        console.log(&quot;User Email : &quot; + user.email)
+                    },
+                    error: (error) =&gt; {
+                        console.log(error.message)
+                    }
+                });
+            }
+        }
+    }
+&lt;/script&gt;
+</code></pre>
+
+<hr>
+
+<h4 id="signin-with-google">SignIn with google</h4>
+<p>let your users authenticate with Firebase using their <strong>Google accounts</strong>.</p>
+<p>Syntax : <code>$auth.signInWithGoogle(object)</code></p>
+<h5 id="example_7">Example</h5>
+<pre><code class="html">&lt;template&gt;
+    &lt;div class = &quot;register&quot;&gt;
+        &lt;h3&gt;SignIn using google account&lt;/h3&gt;
+        &lt;button @click=&quot;signInWithGoogle&quot;&gt;Using google&lt;/button&gt;
+    &lt;/div&gt;
+&lt;template&gt;
+
+&lt;script&gt;
+    export default {
+        mounted() {
+            // Check if the user signed in with redirection. 
+            this.$auth.state({
+                forward: '/app',
+                redirect: '/login',
+                then: (user) =&gt; {
+                    //
+                },
+                catch: (error) =&gt; {
+                    console.log(error.message)
+                }
+            })
+        },
+        data() {
+            return {
+            }
+        },
+        methods: {
+            signInWithGoogle() {
+                // SignIn with google
+                this.$auth.signInWithGoogle({
+                    result: (user) =&gt; {
+                        // This gives you a Google Access Token. You can use it to access the Google API.
+                        // The signed-in user info.
+                    },
+                    error: (error) =&gt; {
+                        console.log(error.message)
+                    }
+                });
+            }
+        }
+    }
+&lt;/script&gt;
+</code></pre>
+
+<hr>
+
+<h4 id="signin-with-facebook">SignIn with Facebook</h4>
+<p>To let your users authenticate with Firebase using their <strong>Facebook Accounts</strong>.</p>
+<p>Syntax : <code>$auth.signInWithFacebook(object)</code></p>
+<hr>
+
+<h4 id="signin-with-twitter">SignIn with Twitter</h4>
+<p>To let your users authenticate with Firebase using their <strong>Twitter Accounts</strong>.</p>
+<p>Syntax : <code>$auth.signInWithTwitter(object)</code></p>
+<hr>
+
+<h4 id="signin-with-github">SignIn with Github</h4>
+<p>To let your users authenticate with Firebase using their <strong>Github Accounts</strong>.</p>
+<p>Syntax : <code>$auth.signInWithGithub(object)</code></p>
+<hr>
+
+<h4 id="signout">SignOut</h4>
+<p>To sign out a user, call <code>logout</code>.</p>
+<p>Syntax : <code>$auth.logout()</code></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../directory-structure/" title="Directory Structure" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Directory Structure
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../storage/" title="Cloud Storage" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Cloud Storage
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

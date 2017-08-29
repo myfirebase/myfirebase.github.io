@@ -2,23 +2,238 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Home"
+            "text": "Myfirebase\n \nSPA Framework\n Documentation\n\n\n\nMyfirebase\n is a decoupled single page application framework which is highly compatible with google firebase.\n\n\n\n\n\n\nEasy to use\n : Simple, nice directory structure.\n\n\n\n\n\n\nSeparation of concerns\n : Using \nVuejs\n components and \nVuex\n a state management system.\n\n\n\n\n\n\nFirebase\n : Authentication, Reeltime Database, Cloud storage, all in one.", 
+            "title": "Welcome"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/installation/", 
+            "text": "Prerequisites\n\n\n\n\nNPM\n is the recommended installation method when building large scale applications with \nMyfirebase\n.\n\n\n\n\nIf this is the first time you want to give \nnpm\n a shot, don't worry, we got exactly what you need.\n\n\n\n\n\n\nHow to Install Node.js and NPM on Windows\n\n\n\n\n\n\nHow to Install Node.js and NPM on a Mac\n\n\n\n\n\n\nHow to Install Node.js and NPM on a Linux\n\n\n\n\n\n\nFirebase command line interface\n, \nnpm install -g firebase-tools\n\n\n\n\n\n\nInstalling Myfirebase\n\n\n# Clone the repository\ngit clone https://github.com/myfirebase/myfirebase\n\n# Change directory\ncd myfirebase\n\n# Install dependencies\nnpm install\n\n# Sign in using your Google account\nfirebase login\n\n# Initialize firebase project\nfirebase init\n\n\n\n\nRun dev server\n\n\n# Run the server\nnpm run dev\n\n\n\n\nProduction\n\n\n# Production\nnpm run build\n\n\n\n\nDeploy your project\n\n\n# Deploy project\nfirebase deploy\n\n\n\n\nCongratulations\n\n\n\n\nCongratulations\n\n\nYou've installed \nMyfirebase\n correctly, now let's dive right in to this framework directory to see what's going on, \nDirectory Structure\n.", 
+            "title": "Installation"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/installation/#prerequisites", 
+            "text": "NPM  is the recommended installation method when building large scale applications with  Myfirebase .   If this is the first time you want to give  npm  a shot, don't worry, we got exactly what you need.    How to Install Node.js and NPM on Windows    How to Install Node.js and NPM on a Mac    How to Install Node.js and NPM on a Linux    Firebase command line interface ,  npm install -g firebase-tools", 
+            "title": "Prerequisites"
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/installation/#installing-myfirebase", 
+            "text": "# Clone the repository\ngit clone https://github.com/myfirebase/myfirebase\n\n# Change directory\ncd myfirebase\n\n# Install dependencies\nnpm install\n\n# Sign in using your Google account\nfirebase login\n\n# Initialize firebase project\nfirebase init", 
+            "title": "Installing Myfirebase"
+        }, 
+        {
+            "location": "/installation/#run-dev-server", 
+            "text": "# Run the server\nnpm run dev", 
+            "title": "Run dev server"
+        }, 
+        {
+            "location": "/installation/#production", 
+            "text": "# Production\nnpm run build", 
+            "title": "Production"
+        }, 
+        {
+            "location": "/installation/#deploy-your-project", 
+            "text": "# Deploy project\nfirebase deploy", 
+            "title": "Deploy your project"
+        }, 
+        {
+            "location": "/installation/#congratulations", 
+            "text": "Congratulations  You've installed  Myfirebase  correctly, now let's dive right in to this framework directory to see what's going on,  Directory Structure .", 
+            "title": "Congratulations"
+        }, 
+        {
+            "location": "/directory-structure/", 
+            "text": "Checking out the project structure\n\n\nBy default, Myfireabse Application structure provides a great starting point for your application, For sure, you are free to organize your files/directories however you like.\n\n\nRoot Directory\n\n\nThe root directory contains \nsrc\n, \nbuild\n, \nconfig\n, \nfunctions\n and \npublic\n directories. \n\n\nThis directory also houses your firebase.json and database.rules.json file.\n\n\n/src\n\n\nYour main code lives here, Where the application core is located, \nfirebase\n, routes, main.js and Vue components, 99% of the time, you'll be working in \nsrc/\n.\n\n\n\n\n\n\n/src/assets\n directory, where you can write your global sass/scss preprocessor.\n\n\n\n\n\n\n/src/firebase\n directory, contains firebase SDK class and config.js file, \n\n\n\n\n\n\n/src/routes\n directory, where you can define your application routes, \nVuejs Routes Docs\n. \n\n\n\n\n\n\nmain.js file where your application core is defined. \n\n\n\n\n\n\n/src/component\n directory as the name implies, contains alll of your application components files, here wjere you can create new Vue components, according to vuejs, components took \n.vue\n as extemsion, see \nVuejs Components\n.\n\n\n\n\n\n\nFor sure, you are free to define and organize this directory structure however you like.\n\n\n/storage\n\n\nThe Storage Directory contains all of your storage files.\n\n\nWhat is storage??\n\n\nStorage is a state management pattern + library for Vue.js applications, Vuex keeps components communicating to each other, see \nVuex\n.\n\n\n/public\n\n\nPublic directory contains the main index.html file, this directory also houses all of your application compiled assets files css/js, \nthese assets will be injected to index.html automatically\n\n\n\n\n\n\nindex.html \nindex page\n\n\n\n\n\n\n404.html \nNotFound page 404\n\n\n\n\n\n\ncss \ncss directory\n\n\n\n\n\n\njs \njs directory\n\n\n\n\n\n\n/build\n\n\nApparently you may not touch anything right here, this directory contains all the \nbuild\n files managed by node.js\n\n\n/config\n\n\nWhere development and production mode configuration is located.", 
+            "title": "Directory Structure"
+        }, 
+        {
+            "location": "/directory-structure/#checking-out-the-project-structure", 
+            "text": "By default, Myfireabse Application structure provides a great starting point for your application, For sure, you are free to organize your files/directories however you like.", 
+            "title": "Checking out the project structure"
+        }, 
+        {
+            "location": "/directory-structure/#root-directory", 
+            "text": "The root directory contains  src ,  build ,  config ,  functions  and  public  directories.   This directory also houses your firebase.json and database.rules.json file.", 
+            "title": "Root Directory"
+        }, 
+        {
+            "location": "/directory-structure/#src", 
+            "text": "Your main code lives here, Where the application core is located,  firebase , routes, main.js and Vue components, 99% of the time, you'll be working in  src/ .    /src/assets  directory, where you can write your global sass/scss preprocessor.    /src/firebase  directory, contains firebase SDK class and config.js file,     /src/routes  directory, where you can define your application routes,  Vuejs Routes Docs .     main.js file where your application core is defined.     /src/component  directory as the name implies, contains alll of your application components files, here wjere you can create new Vue components, according to vuejs, components took  .vue  as extemsion, see  Vuejs Components .    For sure, you are free to define and organize this directory structure however you like.", 
+            "title": "/src"
+        }, 
+        {
+            "location": "/directory-structure/#storage", 
+            "text": "The Storage Directory contains all of your storage files.  What is storage??  Storage is a state management pattern + library for Vue.js applications, Vuex keeps components communicating to each other, see  Vuex .", 
+            "title": "/storage"
+        }, 
+        {
+            "location": "/directory-structure/#public", 
+            "text": "Public directory contains the main index.html file, this directory also houses all of your application compiled assets files css/js,  these assets will be injected to index.html automatically    index.html  index page    404.html  NotFound page 404    css  css directory    js  js directory", 
+            "title": "/public"
+        }, 
+        {
+            "location": "/directory-structure/#build", 
+            "text": "Apparently you may not touch anything right here, this directory contains all the  build  files managed by node.js", 
+            "title": "/build"
+        }, 
+        {
+            "location": "/directory-structure/#config", 
+            "text": "Where development and production mode configuration is located.", 
+            "title": "/config"
+        }, 
+        {
+            "location": "/authentication/", 
+            "text": "Tip\n\n\nBefore you begin, please check the \nfirebase auth docs\n.\n\n\n\n\nHow hard it is to integrate \nFirebase auth\n to your web project especially when you try to structure and orginize firebase auth globally to be used through all \nVue components\n.\n\n\nThanks to \nMyfirebase auth system\n which makes firebase auth easier to be managed using \nVuex\n, the fireabse auth is injected and triggered at beginning of the Vue instance.\n\n\n\n\n\nAuth instance\n\n\nSyntax : \n$auth\n\n\n$auth\n is a global auth instance which called through Vue component.\n\n\nExample\n\n\ntemplate\n\n    \ndiv class = \ncontainer\n\n        \n!-- display result --\n\n        User Name : {{userName}}\n        Email :     {{userEmail}}\n    \n/div\n\n\ntemplate\n\n\n\nscript\n\n    export default {\n        mounted() {\n            // retrieve username.\n            this.userName = this.$auth.user().displayName\n            // retrieve user email.\n            this.userEmail = this.$auth.user().email\n        },\n        data() {\n            return {\n                userName: ''\n            }\n        }\n    }\n\n/script\n\n\n\n\n\nBasically \n$auth\n instance is your key to get access and manage \nfirebase auth\n.\n\n\n\n\n\nGet Firebase Auth Module\n\n\nTo retrieve firebase auth module.\n\n\nSyntax : \n$auth.getAuth()\n\n\n\n\n\nGet current user\n\n\nYou can get the current signed in user by calling global auth instance.\n\n\nSyntax : \n$auth.getUser()\n\n\nExample\n\n\nscript\n\n    export default {\n        mounted() {\n            // get current user\n            let user = this.$auth.getUser()\n            // get email\n            console.log(user.email)\n            // get username\n            console.log(user.displayName)\n        }\n    }\n\n/script\n\n\n\n\n\n\n\n\nUpdate Profile Picture\n\n\nYou can update profile pricture usign \nupdateProfilePicture(object)\n method, this will update the default firebase user \nprofileURL\n.\n\n\n\n\nTip\n\n\nBefore you start updating profile picture, make sure that you have uploaded that picture to firebase storage, and get photoURL, see \nUpload a file with Myfirebase\n.\n\n\n\n\nSyntax : \n$auth.updateProfilePicture(object)\n\n\nExample\n\n\nscript\n\n    export default {\n        mounted () {\n\n        },\n        data () {\n            return {\n                // link to profile photo\n                picture: 'https://link-to-photo.test/profile.png'\n            }\n        },\n        methods:{\n            // update profile picture\n            updateProfilePicture() {\n                this.$auth.updateProfilePicture({\n                    // picture link\n                    ref: this.picture,\n                    result: () =\n {\n                        //updated\n                    },\n                    error: (error) =\n {\n                        console.log(error.message)\n                    }\n                })\n            }\n        }\n    }\n\nscript\n\n\n\n\n\n\n\n\nAuth state\n\n\nSyntax : \n$auth.state(object)\n\n\nConsider it just like a auth middleware where you can check if the user is signed in or not, you can also redirect user to an other component if he doesn't signed in.\n\n\nExample\n\n\ntemplate\n\n    \ndiv class = \ncontainer\n\n        \n!-- display result --\n\n        User Name : {{userName}}\n    \n/div\n\n\ntemplate\n\n\n\nscript\n\n    export default {\n        mounted() {\n            // Check if the user signed in with redirection. \n            this.$auth.state({\n                forward: '',\n                redirect: '/login',\n                then: (user) =\n {\n                    this.userName = user.displayName \n                },\n                catch: (error) =\n {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                userName: ''\n            }\n        }\n    }\n\n/script\n\n\n\n\n\n\n\n\nAuth check\n\n\nJust like \nauth state\n but without redirection.\n\n\nSyntax : \n$auth.check(object)\n\n\nExample\n\n\ntemplate\n\n    \nul class=\nnav navbar-nav navbar-right\n\n        \nli v-if = \nsigned\n class=\n\n            \na href=\n#\n{{userName}}\n/a\n\n            \nul class=\ndropdown-menu\n\n                \nli\nLogout\n/a\n/li\n\n            \n/ul\n\n        \n/li\n\n    \n/ul\n\n\ntemplate\n\n\n\nscript\n\n    export default {\n        mounted() {\n            // Check if the user signed in without redirection. \n            this.$auth.check({\n                then: (user) =\n {\n                    this.signed = true\n                    this.userName = user.displayName \n                },\n                catch: (error) =\n {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                userName: '',\n                signed: false,\n            }\n        }\n    }\n\n/script\n\n\n\n\n\n\n\n\nSignup with email and password\n\n\nTo register a new user with email and password.\n\n\nSynax : \n$auth.registerWithEmailAndPassword(object)\n\n\nExample\n\n\ntemplate\n\n    \ndiv class = \nregister\n\n        \ninput type=\ntext\n v-mode=\nemail\n\n        \ninput type=\npassword\n v-model=\npassword\n\n        \nbutton @click=\nregister\n/button\n\n    \n/div\n\n\ntemplate\n\n\n\nscript\n\n    export default {\n        mounted() {\n            // Check if the user signed in with redirection. \n            this.$auth.state({\n                forward: '/app',\n                redirect: '/login',\n                then: (user) =\n {\n                    //\n                },\n                catch: (error) =\n {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                email: '',\n                password: '',\n            }\n        },\n        methods: {\n            registerWithEmailAndPassword(){\n                // register user with email and password\n                this.$auth.registerWithEmailAndPassword({\n                    email: this.email,\n                    password: this.password,\n                    result: (user) =\n {\n                        console.log(\nUser Email : \n + user.email)\n                    },\n                    error: (error) =\n {\n                        console.log(error.message)\n                    }\n                });\n            }\n        }\n    }\n\n/script\n\n\n\n\n\n\n\n\nSignIn with email and password\n\n\nTo signin a user with email and passowrd.\n\n\nSyntax : \n$auth.loginWithEmailAndPassword(object)\n\n\nExample\n\n\ntemplate\n\n    \ndiv class = \nregister\n\n        \ninput type=\ntext\n v-mode=\nemail\n\n        \ninput type=\npassword\n v-model=\npassword\n\n        \nbutton @click=\nloginWithEmailAndPassword\n/button\n\n    \n/div\n\n\ntemplate\n\n\n\nscript\n\n    export default {\n        mounted() {\n            // Check if the user signed in with redirection. \n            this.$auth.state({\n                forward: '/app',\n                redirect: '/login',\n                then: (user) =\n {\n                    //\n                },\n                catch: (error) =\n {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                email: '',\n                password: '',\n            }\n        },\n        methods: {\n            loginWithEmailAndPassword() {\n                // login with email and password\n                this.$auth.loginWithEmailAndPassword({\n                    email: this.email,\n                    password: this.password,\n                    result: (user) =\n {\n                        console.log(\nUser Email : \n + user.email)\n                    },\n                    error: (error) =\n {\n                        console.log(error.message)\n                    }\n                });\n            }\n        }\n    }\n\n/script\n\n\n\n\n\n\n\n\nSignIn with google\n\n\nlet your users authenticate with Firebase using their \nGoogle accounts\n.\n\n\nSyntax : \n$auth.signInWithGoogle(object)\n\n\nExample\n\n\ntemplate\n\n    \ndiv class = \nregister\n\n        \nh3\nSignIn using google account\n/h3\n\n        \nbutton @click=\nsignInWithGoogle\nUsing google\n/button\n\n    \n/div\n\n\ntemplate\n\n\n\nscript\n\n    export default {\n        mounted() {\n            // Check if the user signed in with redirection. \n            this.$auth.state({\n                forward: '/app',\n                redirect: '/login',\n                then: (user) =\n {\n                    //\n                },\n                catch: (error) =\n {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n            }\n        },\n        methods: {\n            signInWithGoogle() {\n                // SignIn with google\n                this.$auth.signInWithGoogle({\n                    result: (user) =\n {\n                        // This gives you a Google Access Token. You can use it to access the Google API.\n                        // The signed-in user info.\n                    },\n                    error: (error) =\n {\n                        console.log(error.message)\n                    }\n                });\n            }\n        }\n    }\n\n/script\n\n\n\n\n\n\n\n\nSignIn with Facebook\n\n\nTo let your users authenticate with Firebase using their \nFacebook Accounts\n.\n\n\nSyntax : \n$auth.signInWithFacebook(object)\n\n\n\n\n\nSignIn with Twitter\n\n\nTo let your users authenticate with Firebase using their \nTwitter Accounts\n.\n\n\nSyntax : \n$auth.signInWithTwitter(object)\n\n\n\n\n\nSignIn with Github\n\n\nTo let your users authenticate with Firebase using their \nGithub Accounts\n.\n\n\nSyntax : \n$auth.signInWithGithub(object)\n\n\n\n\n\nSignOut\n\n\nTo sign out a user, call \nlogout\n.\n\n\nSyntax : \n$auth.logout()", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/authentication/#auth-instance", 
+            "text": "Syntax :  $auth  $auth  is a global auth instance which called through Vue component.", 
+            "title": "Auth instance"
+        }, 
+        {
+            "location": "/authentication/#example", 
+            "text": "template \n     div class =  container \n         !-- display result -- \n        User Name : {{userName}}\n        Email :     {{userEmail}}\n     /div  template  script \n    export default {\n        mounted() {\n            // retrieve username.\n            this.userName = this.$auth.user().displayName\n            // retrieve user email.\n            this.userEmail = this.$auth.user().email\n        },\n        data() {\n            return {\n                userName: ''\n            }\n        }\n    } /script   Basically  $auth  instance is your key to get access and manage  firebase auth .", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/authentication/#get-firebase-auth-module", 
+            "text": "To retrieve firebase auth module.  Syntax :  $auth.getAuth()", 
+            "title": "Get Firebase Auth Module"
+        }, 
+        {
+            "location": "/authentication/#get-current-user", 
+            "text": "You can get the current signed in user by calling global auth instance.  Syntax :  $auth.getUser()", 
+            "title": "Get current user"
+        }, 
+        {
+            "location": "/authentication/#example_1", 
+            "text": "script \n    export default {\n        mounted() {\n            // get current user\n            let user = this.$auth.getUser()\n            // get email\n            console.log(user.email)\n            // get username\n            console.log(user.displayName)\n        }\n    } /script", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/authentication/#update-profile-picture", 
+            "text": "You can update profile pricture usign  updateProfilePicture(object)  method, this will update the default firebase user  profileURL .   Tip  Before you start updating profile picture, make sure that you have uploaded that picture to firebase storage, and get photoURL, see  Upload a file with Myfirebase .   Syntax :  $auth.updateProfilePicture(object)", 
+            "title": "Update Profile Picture"
+        }, 
+        {
+            "location": "/authentication/#example_2", 
+            "text": "script \n    export default {\n        mounted () {\n\n        },\n        data () {\n            return {\n                // link to profile photo\n                picture: 'https://link-to-photo.test/profile.png'\n            }\n        },\n        methods:{\n            // update profile picture\n            updateProfilePicture() {\n                this.$auth.updateProfilePicture({\n                    // picture link\n                    ref: this.picture,\n                    result: () =  {\n                        //updated\n                    },\n                    error: (error) =  {\n                        console.log(error.message)\n                    }\n                })\n            }\n        }\n    } script", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/authentication/#auth-state", 
+            "text": "Syntax :  $auth.state(object)  Consider it just like a auth middleware where you can check if the user is signed in or not, you can also redirect user to an other component if he doesn't signed in.", 
+            "title": "Auth state"
+        }, 
+        {
+            "location": "/authentication/#example_3", 
+            "text": "template \n     div class =  container \n         !-- display result -- \n        User Name : {{userName}}\n     /div  template  script \n    export default {\n        mounted() {\n            // Check if the user signed in with redirection. \n            this.$auth.state({\n                forward: '',\n                redirect: '/login',\n                then: (user) =  {\n                    this.userName = user.displayName \n                },\n                catch: (error) =  {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                userName: ''\n            }\n        }\n    } /script", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/authentication/#auth-check", 
+            "text": "Just like  auth state  but without redirection.  Syntax :  $auth.check(object)", 
+            "title": "Auth check"
+        }, 
+        {
+            "location": "/authentication/#example_4", 
+            "text": "template \n     ul class= nav navbar-nav navbar-right \n         li v-if =  signed  class= \n             a href= # {{userName}} /a \n             ul class= dropdown-menu \n                 li Logout /a /li \n             /ul \n         /li \n     /ul  template  script \n    export default {\n        mounted() {\n            // Check if the user signed in without redirection. \n            this.$auth.check({\n                then: (user) =  {\n                    this.signed = true\n                    this.userName = user.displayName \n                },\n                catch: (error) =  {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                userName: '',\n                signed: false,\n            }\n        }\n    } /script", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/authentication/#signup-with-email-and-password", 
+            "text": "To register a new user with email and password.  Synax :  $auth.registerWithEmailAndPassword(object)", 
+            "title": "Signup with email and password"
+        }, 
+        {
+            "location": "/authentication/#example_5", 
+            "text": "template \n     div class =  register \n         input type= text  v-mode= email \n         input type= password  v-model= password \n         button @click= register /button \n     /div  template  script \n    export default {\n        mounted() {\n            // Check if the user signed in with redirection. \n            this.$auth.state({\n                forward: '/app',\n                redirect: '/login',\n                then: (user) =  {\n                    //\n                },\n                catch: (error) =  {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                email: '',\n                password: '',\n            }\n        },\n        methods: {\n            registerWithEmailAndPassword(){\n                // register user with email and password\n                this.$auth.registerWithEmailAndPassword({\n                    email: this.email,\n                    password: this.password,\n                    result: (user) =  {\n                        console.log( User Email :   + user.email)\n                    },\n                    error: (error) =  {\n                        console.log(error.message)\n                    }\n                });\n            }\n        }\n    } /script", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/authentication/#signin-with-email-and-password", 
+            "text": "To signin a user with email and passowrd.  Syntax :  $auth.loginWithEmailAndPassword(object)", 
+            "title": "SignIn with email and password"
+        }, 
+        {
+            "location": "/authentication/#example_6", 
+            "text": "template \n     div class =  register \n         input type= text  v-mode= email \n         input type= password  v-model= password \n         button @click= loginWithEmailAndPassword /button \n     /div  template  script \n    export default {\n        mounted() {\n            // Check if the user signed in with redirection. \n            this.$auth.state({\n                forward: '/app',\n                redirect: '/login',\n                then: (user) =  {\n                    //\n                },\n                catch: (error) =  {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                email: '',\n                password: '',\n            }\n        },\n        methods: {\n            loginWithEmailAndPassword() {\n                // login with email and password\n                this.$auth.loginWithEmailAndPassword({\n                    email: this.email,\n                    password: this.password,\n                    result: (user) =  {\n                        console.log( User Email :   + user.email)\n                    },\n                    error: (error) =  {\n                        console.log(error.message)\n                    }\n                });\n            }\n        }\n    } /script", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/authentication/#signin-with-google", 
+            "text": "let your users authenticate with Firebase using their  Google accounts .  Syntax :  $auth.signInWithGoogle(object)", 
+            "title": "SignIn with google"
+        }, 
+        {
+            "location": "/authentication/#example_7", 
+            "text": "template \n     div class =  register \n         h3 SignIn using google account /h3 \n         button @click= signInWithGoogle Using google /button \n     /div  template  script \n    export default {\n        mounted() {\n            // Check if the user signed in with redirection. \n            this.$auth.state({\n                forward: '/app',\n                redirect: '/login',\n                then: (user) =  {\n                    //\n                },\n                catch: (error) =  {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n            }\n        },\n        methods: {\n            signInWithGoogle() {\n                // SignIn with google\n                this.$auth.signInWithGoogle({\n                    result: (user) =  {\n                        // This gives you a Google Access Token. You can use it to access the Google API.\n                        // The signed-in user info.\n                    },\n                    error: (error) =  {\n                        console.log(error.message)\n                    }\n                });\n            }\n        }\n    } /script", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/authentication/#signin-with-facebook", 
+            "text": "To let your users authenticate with Firebase using their  Facebook Accounts .  Syntax :  $auth.signInWithFacebook(object)", 
+            "title": "SignIn with Facebook"
+        }, 
+        {
+            "location": "/authentication/#signin-with-twitter", 
+            "text": "To let your users authenticate with Firebase using their  Twitter Accounts .  Syntax :  $auth.signInWithTwitter(object)", 
+            "title": "SignIn with Twitter"
+        }, 
+        {
+            "location": "/authentication/#signin-with-github", 
+            "text": "To let your users authenticate with Firebase using their  Github Accounts .  Syntax :  $auth.signInWithGithub(object)", 
+            "title": "SignIn with Github"
+        }, 
+        {
+            "location": "/authentication/#signout", 
+            "text": "To sign out a user, call  logout .  Syntax :  $auth.logout()", 
+            "title": "SignOut"
+        }, 
+        {
+            "location": "/storage/", 
+            "text": "Before you begin, please check the \nfirebase storage docs\n.\n\n\n\n\nMyfirebase provides a simple way to interact with firebase storage via a global instance \n$sotrage\n.\n\n\nMyfirebase Storage instance\n\n\nSyntax : \n$storage\n\n\n$auth\n is a global auth instance which called through Vue component.\n\n\n\n\n\nGet firebase storage instance\n\n\nSyntax : \n$storage.get()\n\n\nYou can retrive firebase storage object usign \nget()\n method.\n\n\n\n\n\nGet File URL\n\n\nSyntax : \n$storage.getDownloadURL(object)\n\n\nYou can get your file URL such like user avatar or document which stored through firebase storage using \ngetDownloadURL\n.\n\n\nExample\n\n\ntemplate\n\n    \ndiv class = \ncontainer\n\n        \nimg :src=\navatar\n alt=\nuser-avatar\n /\n\n    \n/div\n\n\n/template\n\n\nscript\n\n    export default {\n        mounted() {\n            // Get file URL from firebase storage\n            this.$storage.getDownloadURL({\n                ref: \nimages/default.png\n,\n                result: (result) =\n {\n                    this.avatar = result\n                },\n                error: (error) =\n {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                avatar: \n\n            }\n        }\n    }\n\n/script\n\n\n\n\n\n\n\n\nUpload file\n\n\nSytax : \n$storage.upload(object)\n\n\nYou can upload a file to firebase storage usign \nupload(object)\n.\n\n\nExample\n\n\nWe are going to upload a new file to the server usign upload method.\n\n\ntemplate\n\n    \ndiv class = \ncontainer\n\n        \nlabel class=\nbtn btn-default\n\n            \ninput type=\nfile\n class=\nhidden\n @change=\ngetFile\n\n            Browse\n        \n/label\n\n        \nbutton class=\nbtn btn-primary\n @click=\nuploadAvatar()\n update\n/i\n/button\n\n    \n/div\n\n\n/template\n\n\n\nscript\n\n    export default {\n        data(){\n            return {\n                // new file\n                newAvatar: \n\n            }\n        },\n        methods: {\n            // get file form input\n            getFile(e) {\n                this.newAvatar = e.target.files[0]\n            },\n            // upload file\n            uploadAvatar() {\n                if (!this.newAvatar) {\n                    return\n                }\n                let name = this.newAvatar.name\n                // start uploading\n                this.$storage.upload({\n                    ref: `/images/${name}`,\n                    file: this.newAvatar,\n                    progress: (snapshot) =\n {},\n                    error: (err) =\n {\n                        console.log(err.message)\n                    },\n                    completed: (downloadURL) =\n {\n                        console.log(downloadURL)\n                    }\n                })\n            }\n        }\n    }\n\n/script\n\n\n\n\n\nDelete file\n\n\nSyntax : \n$storage.delete(string)\n\n\nYou can delete a file with \ndelete\n method specifying the file path.\n\n\n\n\nfile path is a storage path where the concerned file is located.\n\n\n\n\nExample\n\n\ntemplate\n\n    \ndiv class = \ncontainer\n\n        \nbutton @click=\ndelete()\nDelete photo\n/button\n\n    \n/div\n\n\n/template\n\n\nscript\n\n    export default {\n        data() {\n            return {\n                file: \nimage/file.png\n\n            }\n        },\n        methods: {\n            delete() {\n                this.$storage.delete({\n                    ref: this.file,\n                    result: () =\n {\n                        console.log(\nDeleted\n)\n                    },\n                    error: (error) =\n {\n                        console.log(error.message)\n                    }\n                })\n            }\n        }\n    }\n\n/script", 
+            "title": "Cloud Storage"
+        }, 
+        {
+            "location": "/storage/#myfirebase-storage-instance", 
+            "text": "Syntax :  $storage  $auth  is a global auth instance which called through Vue component.", 
+            "title": "Myfirebase Storage instance"
+        }, 
+        {
+            "location": "/storage/#get-firebase-storage-instance", 
+            "text": "Syntax :  $storage.get()  You can retrive firebase storage object usign  get()  method.", 
+            "title": "Get firebase storage instance"
+        }, 
+        {
+            "location": "/storage/#get-file-url", 
+            "text": "Syntax :  $storage.getDownloadURL(object)  You can get your file URL such like user avatar or document which stored through firebase storage using  getDownloadURL .", 
+            "title": "Get File URL"
+        }, 
+        {
+            "location": "/storage/#example", 
+            "text": "template \n     div class =  container \n         img :src= avatar  alt= user-avatar  / \n     /div  /template  script \n    export default {\n        mounted() {\n            // Get file URL from firebase storage\n            this.$storage.getDownloadURL({\n                ref:  images/default.png ,\n                result: (result) =  {\n                    this.avatar = result\n                },\n                error: (error) =  {\n                    console.log(error.message)\n                }\n            })\n        },\n        data() {\n            return {\n                avatar:  \n            }\n        }\n    } /script", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/storage/#upload-file", 
+            "text": "Sytax :  $storage.upload(object)  You can upload a file to firebase storage usign  upload(object) .", 
+            "title": "Upload file"
+        }, 
+        {
+            "location": "/storage/#example_1", 
+            "text": "We are going to upload a new file to the server usign upload method.  template \n     div class =  container \n         label class= btn btn-default \n             input type= file  class= hidden  @change= getFile \n            Browse\n         /label \n         button class= btn btn-primary  @click= uploadAvatar()  update /i /button \n     /div  /template  script \n    export default {\n        data(){\n            return {\n                // new file\n                newAvatar:  \n            }\n        },\n        methods: {\n            // get file form input\n            getFile(e) {\n                this.newAvatar = e.target.files[0]\n            },\n            // upload file\n            uploadAvatar() {\n                if (!this.newAvatar) {\n                    return\n                }\n                let name = this.newAvatar.name\n                // start uploading\n                this.$storage.upload({\n                    ref: `/images/${name}`,\n                    file: this.newAvatar,\n                    progress: (snapshot) =  {},\n                    error: (err) =  {\n                        console.log(err.message)\n                    },\n                    completed: (downloadURL) =  {\n                        console.log(downloadURL)\n                    }\n                })\n            }\n        }\n    } /script", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/storage/#delete-file", 
+            "text": "Syntax :  $storage.delete(string)  You can delete a file with  delete  method specifying the file path.   file path is a storage path where the concerned file is located.", 
+            "title": "Delete file"
+        }, 
+        {
+            "location": "/storage/#example_2", 
+            "text": "template \n     div class =  container \n         button @click= delete() Delete photo /button \n     /div  /template  script \n    export default {\n        data() {\n            return {\n                file:  image/file.png \n            }\n        },\n        methods: {\n            delete() {\n                this.$storage.delete({\n                    ref: this.file,\n                    result: () =  {\n                        console.log( Deleted )\n                    },\n                    error: (error) =  {\n                        console.log(error.message)\n                    }\n                })\n            }\n        }\n    } /script", 
+            "title": "Example"
         }
     ]
 }
