@@ -279,6 +279,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#functions" title="/functions" class="md-nav__link">
+    /functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#storage" title="/storage" class="md-nav__link">
     /storage
   </a>
@@ -302,6 +309,20 @@
           <li class="md-nav__item">
   <a href="#config" title="/config" class="md-nav__link">
     /config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static" title="/static" class="md-nav__link">
+    /static
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests" title="/tests" class="md-nav__link">
+    /tests
   </a>
   
 </li>
@@ -414,6 +435,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#functions" title="/functions" class="md-nav__link">
+    /functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#storage" title="/storage" class="md-nav__link">
     /storage
   </a>
@@ -437,6 +465,20 @@
           <li class="md-nav__item">
   <a href="#config" title="/config" class="md-nav__link">
     /config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static" title="/static" class="md-nav__link">
+    /static
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests" title="/tests" class="md-nav__link">
+    /tests
   </a>
   
 </li>
@@ -484,16 +526,30 @@
 <p>main.js file where your application core is defined. </p>
 </li>
 <li>
-<p><code>/src/component</code> directory as the name implies, contains alll of your application components files, here wjere you can create new Vue components, according to vuejs, components took <strong>.vue</strong> as extemsion, see <a href="https://vuejs.org/v2/guide/components.html">Vuejs Components</a>.</p>
+<p><code>/src/component</code> directory as the name implies, contains all of your application components files, here wjere you can create new Vue components, according to vuejs, components took <strong>.vue</strong> as extemsion, see <a href="https://vuejs.org/v2/guide/components.html">Vuejs Components</a>.</p>
 </li>
 </ul>
 <p>For sure, you are free to define and organize this directory structure however you like.</p>
+<h4 id="functions"><code>/functions</code><a class="headerlink" href="#functions" title="Permanent link">&para;</a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Firebase Cloud functions docs</p>
+<p>New to firebase?, please see <a href="https://firebase.google.com/docs/functions/">Firebase Cloud functions docs</a>.</p>
+</div>
+<p>Firebase cloud functions directory, where the cloud functions are located, in this directory you could write some back-end functions to handle cloud messaging and business logic if necessary and alot of advanced stufs. </p>
+<div class="admonition tip">
+<p class="admonition-title">Google Cloud Platform</p>
+<p>It's become more easier to integrate some advanced stufs such like machine learning and image processing with <a href="https://cloud.google.com">Google Cloud Platform</a>.</p>
+</div>
 <h4 id="storage"><code>/storage</code><a class="headerlink" href="#storage" title="Permanent link">&para;</a></h4>
-<p>The Storage Directory contains all of your storage files.</p>
+<p>The storage directory contains all of your storage files.</p>
 <p><strong>What is storage??</strong></p>
-<p>Storage is a state management pattern + library for Vue.js applications, Vuex keeps components communicating to each other, see <a href="https://vuex.vuejs.org/en/">Vuex</a>.</p>
+<p>Storage contains state management pattern + library for Vue.js applications files, Thanks to Vuex for keeping components communicating to each other, see <a href="https://vuex.vuejs.org/en/">Vuex</a>.</p>
 <h4 id="public"><code>/public</code><a class="headerlink" href="#public" title="Permanent link">&para;</a></h4>
-<p>Public directory contains the main index.html file, this directory also houses all of your application compiled assets files css/js, <strong>these assets will be injected to index.html automatically</strong></p>
+<p>Public directory contains the main index.html file, this directory also houses all of your application compiled assets files css/js and service-workers as well, <strong>these assets will be injected to index.html automatically</strong></p>
+<div class="admonition note">
+<p class="admonition-title">service workers</p>
+<p>Google developers had made some cool articles about service, see <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers">Service Workers: an Introduction</a>.</p>
+</div>
 <ul>
 <li>
 <p>index.html <em>index page</em></p>
@@ -507,11 +563,24 @@
 <li>
 <p>js <em>js directory</em></p>
 </li>
+<li>
+<p>service-worker.js</p>
+</li>
+<li>
+<p>firebase-messaging-sw.js</p>
+</li>
+<li>
+<p>manifest.json</p>
+</li>
 </ul>
 <h4 id="build"><code>/build</code><a class="headerlink" href="#build" title="Permanent link">&para;</a></h4>
 <p>Apparently you may not touch anything right here, this directory contains all the <strong>build</strong> files managed by node.js</p>
 <h4 id="config"><code>/config</code><a class="headerlink" href="#config" title="Permanent link">&para;</a></h4>
 <p>Where development and production mode configuration is located.</p>
+<h4 id="static"><code>/static</code><a class="headerlink" href="#static" title="Permanent link">&para;</a></h4>
+<p>Where static files are located, images and icons are used as a static assets into your applications and provide them to support Progressive web applications.</p>
+<h4 id="tests"><code>/tests</code><a class="headerlink" href="#tests" title="Permanent link">&para;</a></h4>
+<p>Where your application tests are located, by defualt Myfirebase comes with eslint and karma for unit testing, you are free to integrate others libraries and plugins such like <a href="http://nightwatchjs.org/">night watch</a> e2e.</p>
                 
                   
                 
