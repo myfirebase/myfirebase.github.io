@@ -10,7 +10,7 @@
       
       
       
-        <link rel="shortcut icon" href="../assets/images/favicon.png">
+        <link rel="shortcut icon" href="../img/favicon.ico">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
     
@@ -62,7 +62,8 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href=".." title="Myfirebase docs" class="md-icon md-icon--home md-header-nav__button">
+          <a href=".." title="Myfirebase docs" class="md-logo md-header-nav__button">
+            <img src="../img/MyFireBase.png" width="24" height="24">
           </a>
         
       </div>
@@ -151,7 +152,9 @@
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
     
-      <i class="md-icon md-icon--home md-nav__button"></i>
+      <i class="md-logo md-nav__button">
+        <img src="../img/MyFireBase.png">
+      </i>
     
     Myfirebase docs
   </label>
@@ -502,137 +505,139 @@
 <p>Before you begin, please check the <a href="https://firebase.google.com/docs/storage/web/start">firebase storage docs</a>.</p>
 </blockquote>
 <p>Myfirebase provides a simple way to interact with firebase storage via a global instance <code>$sotrage</code>.</p>
-<h4 id="myfirebase-storage-instance">Myfirebase Storage instance</h4>
+<h4 id="myfirebase-storage-instance">Myfirebase Storage instance<a class="headerlink" href="#myfirebase-storage-instance" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$storage</code></p>
 <p><code>$auth</code> is a global auth instance which called through Vue component.</p>
 <hr>
 
-<h4 id="get-firebase-storage-instance">Get firebase storage instance</h4>
+<h4 id="get-firebase-storage-instance">Get firebase storage instance<a class="headerlink" href="#get-firebase-storage-instance" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$storage.get()</code></p>
 <p>You can retrive firebase storage object usign <code>get()</code> method.</p>
 <hr>
 
-<h4 id="get-file-url">Get File URL</h4>
+<h4 id="get-file-url">Get File URL<a class="headerlink" href="#get-file-url" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$storage.getDownloadURL(object)</code></p>
 <p>You can get your file URL such like user avatar or document which stored through firebase storage using <code>getDownloadURL</code>.</p>
-<h5 id="example">Example</h5>
-<pre><code class="html">&lt;template&gt;
-    &lt;div class = &quot;container&quot;&gt;
-        &lt;img :src=&quot;avatar&quot; alt=&quot;user-avatar&quot; /&gt;
-    &lt;/div&gt;
-&lt;/template&gt;
-&lt;script&gt;
-    export default {
-        mounted() {
-            // Get file URL from firebase storage
-            this.$storage.getDownloadURL({
-                ref: &quot;images/default.png&quot;,
-                result: (result) =&gt; {
-                    this.avatar = result
-                },
-                error: (error) =&gt; {
-                    console.log(error.message)
-                }
-            })
-        },
-        data() {
-            return {
-                avatar: &quot;&quot;
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<h5 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">:src</span><span class="o">=</span><span class="s">&quot;avatar&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;user-avatar&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// Get file URL from firebase storage</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$storage</span><span class="p">.</span><span class="nx">getDownloadURL</span><span class="p">({</span>
+                <span class="nx">ref</span><span class="o">:</span> <span class="s2">&quot;images/default.png&quot;</span><span class="p">,</span>
+                <span class="nx">result</span><span class="o">:</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="k">this</span><span class="p">.</span><span class="nx">avatar</span> <span class="o">=</span> <span class="nx">result</span>
+                <span class="p">},</span>
+                <span class="nx">error</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+        <span class="p">},</span>
+        <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">avatar</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <hr>
 
-<h4 id="upload-file">Upload file</h4>
+<h4 id="upload-file">Upload file<a class="headerlink" href="#upload-file" title="Permanent link">&para;</a></h4>
 <p>Sytax : <code>$storage.upload(object)</code></p>
 <p>You can upload a file to firebase storage usign <code>upload(object)</code>.</p>
-<h5 id="example_1">Example</h5>
+<h5 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h5>
 <p>We are going to upload a new file to the server usign upload method.</p>
-<pre><code class="html">&lt;template&gt;
-    &lt;div class = &quot;container&quot;&gt;
-        &lt;label class=&quot;btn btn-default&quot;&gt;
-            &lt;input type=&quot;file&quot; class=&quot;hidden&quot; @change=&quot;getFile&quot;&gt;
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="err">@</span><span class="na">change</span><span class="o">=</span><span class="s">&quot;getFile&quot;</span><span class="p">&gt;</span>
             Browse
-        &lt;/label&gt;
-        &lt;button class=&quot;btn btn-primary&quot; @click=&quot;uploadAvatar()&quot;&gt; update&lt;/i&gt;&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/template&gt;
+        <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;uploadAvatar()&quot;</span><span class="p">&gt;</span> update<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-    export default {
-        data(){
-            return {
-                // new file
-                newAvatar: &quot;&quot;
-            }
-        },
-        methods: {
-            // get file form input
-            getFile(e) {
-                this.newAvatar = e.target.files[0]
-            },
-            // upload file
-            uploadAvatar() {
-                if (!this.newAvatar) {
-                    return
-                }
-                let name = this.newAvatar.name
-                // start uploading
-                this.$storage.upload({
-                    ref: `/images/${name}`,
-                    file: this.newAvatar,
-                    progress: (snapshot) =&gt; {},
-                    error: (err) =&gt; {
-                        console.log(err.message)
-                    },
-                    completed: (downloadURL) =&gt; {
-                        console.log(downloadURL)
-                    }
-                })
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">data</span><span class="p">(){</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="c1">// new file</span>
+                <span class="nx">newAvatar</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+            <span class="c1">// get file form input</span>
+            <span class="nx">getFile</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">newAvatar</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="p">},</span>
+            <span class="c1">// upload file</span>
+            <span class="nx">uploadAvatar</span><span class="p">()</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">newAvatar</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span>
+                <span class="p">}</span>
+                <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">newAvatar</span><span class="p">.</span><span class="nx">name</span>
+                <span class="c1">// start uploading</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">$storage</span><span class="p">.</span><span class="nx">upload</span><span class="p">({</span>
+                    <span class="nx">ref</span><span class="o">:</span> <span class="sb">`/images/</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+                    <span class="nx">file</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">newAvatar</span><span class="p">,</span>
+                    <span class="nx">progress</span><span class="o">:</span> <span class="p">(</span><span class="nx">snapshot</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{},</span>
+                    <span class="nx">error</span><span class="o">:</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                    <span class="p">},</span>
+                    <span class="nx">completed</span><span class="o">:</span> <span class="p">(</span><span class="nx">downloadURL</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">downloadURL</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">})</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
 
-<h4 id="delete-file">Delete file</h4>
+
+<h4 id="delete-file">Delete file<a class="headerlink" href="#delete-file" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$storage.delete(string)</code></p>
 <p>You can delete a file with <code>delete</code> method specifying the file path.</p>
 <blockquote>
 <p>file path is a storage path where the concerned file is located.</p>
 </blockquote>
-<h5 id="example_2">Example</h5>
-<pre><code class="html">&lt;template&gt;
-    &lt;div class = &quot;container&quot;&gt;
-        &lt;button @click=&quot;delete()&quot;&gt;Delete photo&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/template&gt;
-&lt;script&gt;
-    export default {
-        data() {
-            return {
-                file: &quot;image/file.png&quot;
-            }
-        },
-        methods: {
-            delete() {
-                this.$storage.delete({
-                    ref: this.file,
-                    result: () =&gt; {
-                        console.log(&quot;Deleted&quot;)
-                    },
-                    error: (error) =&gt; {
-                        console.log(error.message)
-                    }
-                })
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<h5 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;delete()&quot;</span><span class="p">&gt;</span>Delete photo<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">file</span><span class="o">:</span> <span class="s2">&quot;image/file.png&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+            <span class="k">delete</span><span class="p">()</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">$storage</span><span class="p">.</span><span class="k">delete</span><span class="p">({</span>
+                    <span class="nx">ref</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">file</span><span class="p">,</span>
+                    <span class="nx">result</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Deleted&quot;</span><span class="p">)</span>
+                    <span class="p">},</span>
+                    <span class="nx">error</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">})</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
                 
                   
                 

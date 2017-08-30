@@ -10,7 +10,7 @@
       
       
       
-        <link rel="shortcut icon" href="../assets/images/favicon.png">
+        <link rel="shortcut icon" href="../img/favicon.ico">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
     
@@ -62,7 +62,8 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href=".." title="Myfirebase docs" class="md-icon md-icon--home md-header-nav__button">
+          <a href=".." title="Myfirebase docs" class="md-logo md-header-nav__button">
+            <img src="../img/MyFireBase.png" width="24" height="24">
           </a>
         
       </div>
@@ -151,7 +152,9 @@
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
     
-      <i class="md-icon md-icon--home md-nav__button"></i>
+      <i class="md-logo md-nav__button">
+        <img src="../img/MyFireBase.png">
+      </i>
     
     Myfirebase docs
   </label>
@@ -748,72 +751,74 @@
 <p>Thanks to <strong>Myfirebase auth system</strong> which makes firebase auth easier to be managed using <strong>Vuex</strong>, the fireabse auth is injected and triggered at beginning of the Vue instance.</p>
 <hr>
 
-<h4 id="auth-instance">Auth instance</h4>
+<h4 id="auth-instance">Auth instance<a class="headerlink" href="#auth-instance" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$auth</code></p>
 <p><code>$auth</code> is a global auth instance which called through Vue component.</p>
-<h5 id="example">Example</h5>
-<pre><code class="html">&lt;template&gt;
-    &lt;div class = &quot;container&quot;&gt;
-        &lt;!-- display result --&gt;
+<h5 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- display result --&gt;</span>
         User Name : {{userName}}
         Email :     {{userEmail}}
-    &lt;/div&gt;
-&lt;template&gt;
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-    export default {
-        mounted() {
-            // retrieve username.
-            this.userName = this.$auth.user().displayName
-            // retrieve user email.
-            this.userEmail = this.$auth.user().email
-        },
-        data() {
-            return {
-                userName: ''
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// retrieve username.</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">userName</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">user</span><span class="p">().</span><span class="nx">displayName</span>
+            <span class="c1">// retrieve user email.</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">userEmail</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">user</span><span class="p">().</span><span class="nx">email</span>
+        <span class="p">},</span>
+        <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">userName</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <p>Basically <code>$auth</code> instance is your key to get access and manage <strong>firebase auth</strong>.</p>
 <hr>
 
-<h4 id="get-firebase-auth-module">Get Firebase Auth Module</h4>
+<h4 id="get-firebase-auth-module">Get Firebase Auth Module<a class="headerlink" href="#get-firebase-auth-module" title="Permanent link">&para;</a></h4>
 <p>To retrieve firebase auth module.</p>
 <p>Syntax : <code>$auth.getAuth()</code></p>
 <hr>
 
-<h4 id="get-current-user">Get current user</h4>
+<h4 id="get-current-user">Get current user<a class="headerlink" href="#get-current-user" title="Permanent link">&para;</a></h4>
 <p>You can get the current signed in user by calling global auth instance.</p>
 <p>Syntax : <code>$auth.getUser()</code></p>
-<h5 id="example_1">Example</h5>
-<pre><code class="html">&lt;script&gt;
-    export default {
-        mounted() {
-            // get current user
-            let user = this.$auth.getUser()
-            // get email
-            console.log(user.email)
-            // get username
-            console.log(user.displayName)
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<h5 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// get current user</span>
+            <span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">getUser</span><span class="p">()</span>
+            <span class="c1">// get email</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="p">)</span>
+            <span class="c1">// get username</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">displayName</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <hr>
 
-<h4 id="update-profile-picture">Update Profile Picture</h4>
+<h4 id="update-profile-picture">Update Profile Picture<a class="headerlink" href="#update-profile-picture" title="Permanent link">&para;</a></h4>
 <p>You can update profile pricture usign <code>updateProfilePicture(object)</code> method, this will update the default firebase user <strong>profileURL</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Before you start updating profile picture, make sure that you have uploaded that picture to firebase storage, and get photoURL, see <a href="">Upload a file with Myfirebase</a>.</p>
 </div>
 <p>Syntax : <code>$auth.updateProfilePicture(object)</code></p>
-<h5 id="example_2">Example</h5>
-<pre><code class="html">&lt;script&gt;
+<h5 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
     export default {
         mounted () {
 
@@ -821,7 +826,7 @@
         data () {
             return {
                 // link to profile photo
-                picture: 'https://link-to-photo.test/profile.png'
+                picture: &#39;https://link-to-photo.test/profile.png&#39;
             }
         },
         methods:{
@@ -840,263 +845,269 @@
             }
         }
     }
-&lt;script&gt;
-</code></pre>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <hr>
 
-<h4 id="auth-state">Auth state</h4>
+<h4 id="auth-state">Auth state<a class="headerlink" href="#auth-state" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$auth.state(object)</code></p>
 <p>Consider it just like a auth middleware where you can check if the user is signed in or not, you can also redirect user to an other component if he doesn't signed in.</p>
-<h5 id="example_3">Example</h5>
-<pre><code class="html">&lt;template&gt;
-    &lt;div class = &quot;container&quot;&gt;
-        &lt;!-- display result --&gt;
+<h5 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- display result --&gt;</span>
         User Name : {{userName}}
-    &lt;/div&gt;
-&lt;template&gt;
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-    export default {
-        mounted() {
-            // Check if the user signed in with redirection. 
-            this.$auth.state({
-                forward: '',
-                redirect: '/login',
-                then: (user) =&gt; {
-                    this.userName = user.displayName 
-                },
-                catch: (error) =&gt; {
-                    console.log(error.message)
-                }
-            })
-        },
-        data() {
-            return {
-                userName: ''
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// Check if the user signed in with redirection. </span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">state</span><span class="p">({</span>
+                <span class="nx">forward</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                <span class="nx">redirect</span><span class="o">:</span> <span class="s1">&#39;/login&#39;</span><span class="p">,</span>
+                <span class="nx">then</span><span class="o">:</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="k">this</span><span class="p">.</span><span class="nx">userName</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">displayName</span> 
+                <span class="p">},</span>
+                <span class="k">catch</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+        <span class="p">},</span>
+        <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">userName</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <hr>
 
-<h4 id="auth-check">Auth check</h4>
+<h4 id="auth-check">Auth check<a class="headerlink" href="#auth-check" title="Permanent link">&para;</a></h4>
 <p>Just like <strong>auth state</strong> but without redirection.</p>
 <p>Syntax : <code>$auth.check(object)</code></p>
-<h5 id="example_4">Example</h5>
-<pre><code class="html">&lt;template&gt;
-    &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
-        &lt;li v-if = &quot;signed&quot; class=&quot;&quot;&gt;
-            &lt;a href=&quot;#&quot;&gt;{{userName}}&lt;/a&gt;
-            &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                &lt;li&gt;&gt;Logout&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;template&gt;
+<h5 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav navbar-nav navbar-right&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-if </span><span class="o">=</span> <span class="s">&quot;signed&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>{{userName}}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>&gt;Logout<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-    export default {
-        mounted() {
-            // Check if the user signed in without redirection. 
-            this.$auth.check({
-                then: (user) =&gt; {
-                    this.signed = true
-                    this.userName = user.displayName 
-                },
-                catch: (error) =&gt; {
-                    console.log(error.message)
-                }
-            })
-        },
-        data() {
-            return {
-                userName: '',
-                signed: false,
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// Check if the user signed in without redirection. </span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">check</span><span class="p">({</span>
+                <span class="nx">then</span><span class="o">:</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="k">this</span><span class="p">.</span><span class="nx">signed</span> <span class="o">=</span> <span class="kc">true</span>
+                    <span class="k">this</span><span class="p">.</span><span class="nx">userName</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">displayName</span> 
+                <span class="p">},</span>
+                <span class="k">catch</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+        <span class="p">},</span>
+        <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">userName</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                <span class="nx">signed</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <hr>
 
-<h4 id="signup-with-email-and-password">Signup with email and password</h4>
+<h4 id="signup-with-email-and-password">Signup with email and password<a class="headerlink" href="#signup-with-email-and-password" title="Permanent link">&para;</a></h4>
 <p>To register a new user with email and password.</p>
 <p>Synax : <code>$auth.registerWithEmailAndPassword(object)</code></p>
-<h5 id="example_5">Example</h5>
-<pre><code class="html">&lt;template&gt;
-    &lt;div class = &quot;register&quot;&gt;
-        &lt;input type=&quot;text&quot; v-mode=&quot;email&quot;&gt;
-        &lt;input type=&quot;password&quot; v-model=&quot;password&quot;&gt;
-        &lt;button @click=&quot;register&quot;&gt;&lt;/button&gt;
-    &lt;/div&gt;
-&lt;template&gt;
+<h5 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;register&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">v-mode</span><span class="o">=</span><span class="s">&quot;email&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;register&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-    export default {
-        mounted() {
-            // Check if the user signed in with redirection. 
-            this.$auth.state({
-                forward: '/app',
-                redirect: '/login',
-                then: (user) =&gt; {
-                    //
-                },
-                catch: (error) =&gt; {
-                    console.log(error.message)
-                }
-            })
-        },
-        data() {
-            return {
-                email: '',
-                password: '',
-            }
-        },
-        methods: {
-            registerWithEmailAndPassword(){
-                // register user with email and password
-                this.$auth.registerWithEmailAndPassword({
-                    email: this.email,
-                    password: this.password,
-                    result: (user) =&gt; {
-                        console.log(&quot;User Email : &quot; + user.email)
-                    },
-                    error: (error) =&gt; {
-                        console.log(error.message)
-                    }
-                });
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// Check if the user signed in with redirection. </span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">state</span><span class="p">({</span>
+                <span class="nx">forward</span><span class="o">:</span> <span class="s1">&#39;/app&#39;</span><span class="p">,</span>
+                <span class="nx">redirect</span><span class="o">:</span> <span class="s1">&#39;/login&#39;</span><span class="p">,</span>
+                <span class="nx">then</span><span class="o">:</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="c1">//</span>
+                <span class="p">},</span>
+                <span class="k">catch</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+        <span class="p">},</span>
+        <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                <span class="nx">password</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">registerWithEmailAndPassword</span><span class="p">(){</span>
+                <span class="c1">// register user with email and password</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">registerWithEmailAndPassword</span><span class="p">({</span>
+                    <span class="nx">email</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">email</span><span class="p">,</span>
+                    <span class="nx">password</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span>
+                    <span class="nx">result</span><span class="o">:</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;User Email : &quot;</span> <span class="o">+</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="p">)</span>
+                    <span class="p">},</span>
+                    <span class="nx">error</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">});</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <hr>
 
-<h4 id="signin-with-email-and-password">SignIn with email and password</h4>
+<h4 id="signin-with-email-and-password">SignIn with email and password<a class="headerlink" href="#signin-with-email-and-password" title="Permanent link">&para;</a></h4>
 <p>To signin a user with email and passowrd.</p>
 <p>Syntax : <code>$auth.loginWithEmailAndPassword(object)</code></p>
-<h5 id="example_6">Example</h5>
-<pre><code class="html">&lt;template&gt;
-    &lt;div class = &quot;register&quot;&gt;
-        &lt;input type=&quot;text&quot; v-mode=&quot;email&quot;&gt;
-        &lt;input type=&quot;password&quot; v-model=&quot;password&quot;&gt;
-        &lt;button @click=&quot;loginWithEmailAndPassword&quot;&gt;&lt;/button&gt;
-    &lt;/div&gt;
-&lt;template&gt;
+<h5 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;register&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">v-mode</span><span class="o">=</span><span class="s">&quot;email&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;loginWithEmailAndPassword&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-    export default {
-        mounted() {
-            // Check if the user signed in with redirection. 
-            this.$auth.state({
-                forward: '/app',
-                redirect: '/login',
-                then: (user) =&gt; {
-                    //
-                },
-                catch: (error) =&gt; {
-                    console.log(error.message)
-                }
-            })
-        },
-        data() {
-            return {
-                email: '',
-                password: '',
-            }
-        },
-        methods: {
-            loginWithEmailAndPassword() {
-                // login with email and password
-                this.$auth.loginWithEmailAndPassword({
-                    email: this.email,
-                    password: this.password,
-                    result: (user) =&gt; {
-                        console.log(&quot;User Email : &quot; + user.email)
-                    },
-                    error: (error) =&gt; {
-                        console.log(error.message)
-                    }
-                });
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// Check if the user signed in with redirection. </span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">state</span><span class="p">({</span>
+                <span class="nx">forward</span><span class="o">:</span> <span class="s1">&#39;/app&#39;</span><span class="p">,</span>
+                <span class="nx">redirect</span><span class="o">:</span> <span class="s1">&#39;/login&#39;</span><span class="p">,</span>
+                <span class="nx">then</span><span class="o">:</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="c1">//</span>
+                <span class="p">},</span>
+                <span class="k">catch</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+        <span class="p">},</span>
+        <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                <span class="nx">password</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">loginWithEmailAndPassword</span><span class="p">()</span> <span class="p">{</span>
+                <span class="c1">// login with email and password</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">loginWithEmailAndPassword</span><span class="p">({</span>
+                    <span class="nx">email</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">email</span><span class="p">,</span>
+                    <span class="nx">password</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span>
+                    <span class="nx">result</span><span class="o">:</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;User Email : &quot;</span> <span class="o">+</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="p">)</span>
+                    <span class="p">},</span>
+                    <span class="nx">error</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">});</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <hr>
 
-<h4 id="signin-with-google">SignIn with google</h4>
+<h4 id="signin-with-google">SignIn with google<a class="headerlink" href="#signin-with-google" title="Permanent link">&para;</a></h4>
 <p>let your users authenticate with Firebase using their <strong>Google accounts</strong>.</p>
 <p>Syntax : <code>$auth.signInWithGoogle(object)</code></p>
-<h5 id="example_7">Example</h5>
-<pre><code class="html">&lt;template&gt;
-    &lt;div class = &quot;register&quot;&gt;
-        &lt;h3&gt;SignIn using google account&lt;/h3&gt;
-        &lt;button @click=&quot;signInWithGoogle&quot;&gt;Using google&lt;/button&gt;
-    &lt;/div&gt;
-&lt;template&gt;
+<h5 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;register&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>SignIn using google account<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;signInWithGoogle&quot;</span><span class="p">&gt;</span>Using google<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-    export default {
-        mounted() {
-            // Check if the user signed in with redirection. 
-            this.$auth.state({
-                forward: '/app',
-                redirect: '/login',
-                then: (user) =&gt; {
-                    //
-                },
-                catch: (error) =&gt; {
-                    console.log(error.message)
-                }
-            })
-        },
-        data() {
-            return {
-            }
-        },
-        methods: {
-            signInWithGoogle() {
-                // SignIn with google
-                this.$auth.signInWithGoogle({
-                    result: (user) =&gt; {
-                        // This gives you a Google Access Token. You can use it to access the Google API.
-                        // The signed-in user info.
-                    },
-                    error: (error) =&gt; {
-                        console.log(error.message)
-                    }
-                });
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// Check if the user signed in with redirection. </span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">state</span><span class="p">({</span>
+                <span class="nx">forward</span><span class="o">:</span> <span class="s1">&#39;/app&#39;</span><span class="p">,</span>
+                <span class="nx">redirect</span><span class="o">:</span> <span class="s1">&#39;/login&#39;</span><span class="p">,</span>
+                <span class="nx">then</span><span class="o">:</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="c1">//</span>
+                <span class="p">},</span>
+                <span class="k">catch</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+        <span class="p">},</span>
+        <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">signInWithGoogle</span><span class="p">()</span> <span class="p">{</span>
+                <span class="c1">// SignIn with google</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">signInWithGoogle</span><span class="p">({</span>
+                    <span class="nx">result</span><span class="o">:</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="c1">// This gives you a Google Access Token. You can use it to access the Google API.</span>
+                        <span class="c1">// The signed-in user info.</span>
+                    <span class="p">},</span>
+                    <span class="nx">error</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">});</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <hr>
 
-<h4 id="signin-with-facebook">SignIn with Facebook</h4>
+<h4 id="signin-with-facebook">SignIn with Facebook<a class="headerlink" href="#signin-with-facebook" title="Permanent link">&para;</a></h4>
 <p>To let your users authenticate with Firebase using their <strong>Facebook Accounts</strong>.</p>
 <p>Syntax : <code>$auth.signInWithFacebook(object)</code></p>
 <hr>
 
-<h4 id="signin-with-twitter">SignIn with Twitter</h4>
+<h4 id="signin-with-twitter">SignIn with Twitter<a class="headerlink" href="#signin-with-twitter" title="Permanent link">&para;</a></h4>
 <p>To let your users authenticate with Firebase using their <strong>Twitter Accounts</strong>.</p>
 <p>Syntax : <code>$auth.signInWithTwitter(object)</code></p>
 <hr>
 
-<h4 id="signin-with-github">SignIn with Github</h4>
+<h4 id="signin-with-github">SignIn with Github<a class="headerlink" href="#signin-with-github" title="Permanent link">&para;</a></h4>
 <p>To let your users authenticate with Firebase using their <strong>Github Accounts</strong>.</p>
 <p>Syntax : <code>$auth.signInWithGithub(object)</code></p>
 <hr>
 
-<h4 id="signout">SignOut</h4>
+<h4 id="signout">SignOut<a class="headerlink" href="#signout" title="Permanent link">&para;</a></h4>
 <p>To sign out a user, call <code>logout</code>.</p>
 <p>Syntax : <code>$auth.logout()</code></p>
                 
