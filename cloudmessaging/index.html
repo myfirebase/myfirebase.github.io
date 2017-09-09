@@ -10,20 +10,20 @@
       
       
       
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="shortcut icon" href="../img/favicon.ico">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
     
     
       
-        <title>Myfirebase docs</title>
+        <title>Cloud Messaging - Myfirebase docs</title>
       
     
     
-      <script src="./assets/javascripts/modernizr-1df76c4e58.js"></script>
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
     
     
-      <link rel="stylesheet" href="./assets/stylesheets/application-1fcf5138d0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application-1fcf5138d0.css">
       
     
     
@@ -62,8 +62,8 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="." title="Myfirebase docs" class="md-logo md-header-nav__button">
-            <img src="./img/MyFireBase.png" width="24" height="24">
+          <a href=".." title="Myfirebase docs" class="md-logo md-header-nav__button">
+            <img src="../img/MyFireBase.png" width="24" height="24">
           </a>
         
       </div>
@@ -75,8 +75,12 @@
           
             
               
+                <span class="md-header-nav__parent">
+                  Functionalities
+                </span>
+              
             
-            Welcome
+            Cloud Messaging
           
         </span>
       </div>
@@ -149,7 +153,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     
       <i class="md-logo md-nav__button">
-        <img src="./img/MyFireBase.png">
+        <img src="../img/MyFireBase.png">
       </i>
     
     Myfirebase docs
@@ -183,18 +187,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-    <a href="." title="Welcome" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href=".." title="Welcome" class="md-nav__link">
       Welcome
     </a>
-    
   </li>
 
     
@@ -223,7 +220,7 @@
 
 
   <li class="md-nav__item">
-    <a href="installation/" title="Installation" class="md-nav__link">
+    <a href="../installation/" title="Installation" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -235,7 +232,7 @@
 
 
   <li class="md-nav__item">
-    <a href="directory-structure/" title="Directory Structure" class="md-nav__link">
+    <a href="../directory-structure/" title="Directory Structure" class="md-nav__link">
       Directory Structure
     </a>
   </li>
@@ -250,10 +247,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Functionalities
@@ -271,7 +270,7 @@
 
 
   <li class="md-nav__item">
-    <a href="authentication/" title="Authentication" class="md-nav__link">
+    <a href="../authentication/" title="Authentication" class="md-nav__link">
       Authentication
     </a>
   </li>
@@ -283,7 +282,7 @@
 
 
   <li class="md-nav__item">
-    <a href="storage/" title="Cloud Storage" class="md-nav__link">
+    <a href="../storage/" title="Cloud Storage" class="md-nav__link">
       Cloud Storage
     </a>
   </li>
@@ -295,7 +294,7 @@
 
 
   <li class="md-nav__item">
-    <a href="cloudfunctions/" title="Cloud Functions" class="md-nav__link">
+    <a href="../cloudfunctions/" title="Cloud Functions" class="md-nav__link">
       Cloud Functions
     </a>
   </li>
@@ -305,11 +304,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="cloudmessaging/" title="Cloud Messaging" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="Cloud Messaging" class="md-nav__link md-nav__link--active">
       Cloud Messaging
     </a>
+    
   </li>
 
         
@@ -344,36 +350,9 @@
               
                 
                 
-                  <h1>Welcome</h1>
+                  <h1>Cloud Messaging</h1>
                 
-                <p align="center">
-    <img src="http://i.imgur.com/eui4MCQ.png" alt="Myfirebase">
-</p>
-
-<h3 align="center"><b>Myfirebase</b> <i>SPA Framework</i> Documentation</h3>
-
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Welcome to Myfirebase docs, in this guide, we assume that you already familiar with <a href="http://vuejs.org">VueJs framework</a>, <a href="https://webpack.github.io/">webpack</a>, and <a href="https://www.npmjs.com/">node package manager</a>.</p>
-</div>
-<p><strong>Myfirebase</strong> is a decoupled single page application framework which is highly compatible with google firebase.</p>
-<ul>
-<li>
-<p><strong>Easy to use</strong> : Simple and nice directory structure.</p>
-</li>
-<li>
-<p><strong>Separation of concerns</strong> : Using <a href="https://vuejs.org">Vuejs</a> components and <a href="https://vuex.vuejs.org">Vuex</a> a state management system.</p>
-</li>
-<li>
-<p><strong>Firebase</strong> : Authentication, Reeltime Database, Cloud storage, all in one.</p>
-</li>
-<li>
-<p><strong>Progressive web applications</strong> : PWA made easy.</p>
-</li>
-<li>
-<p><strong>Material design</strong> : material components using <a href="https://vuematerial.github.io">vue-material</a>.</p>
-</li>
-</ul>
+                
                 
                   
                 
@@ -392,20 +371,20 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-        
-          <a href="installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../cloudfunctions/" title="Cloud Functions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Next
+                  Previous
                 </span>
-                Installation
+                Cloud Functions
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
@@ -429,10 +408,10 @@
       
     </div>
     
-      <script src="./assets/javascripts/application-6940329b9f.js"></script>
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
       
       
-      <script>app.initialize({url:{base:"."}})</script>
+      <script>app.initialize({url:{base:".."}})</script>
       
     
     

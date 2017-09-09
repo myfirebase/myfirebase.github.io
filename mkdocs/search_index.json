@@ -7,7 +7,7 @@
         }, 
         {
             "location": "/installation/", 
-            "text": "Prerequisites\n\n\n\n\nNPM\n is the recommended installation method when building large scale applications with \nMyfirebase\n.\n\n\n\n\nIf this is the first time you want to give \nnpm\n a shot, don't worry, we got exactly what you need.\n\n\n\n\n\n\nHow to Install Node.js and NPM on Windows\n\n\n\n\n\n\nHow to Install Node.js and NPM on a Mac\n\n\n\n\n\n\nHow to Install Node.js and NPM on a Linux\n\n\n\n\n\n\nFirebase command line interface\n, \nnpm install -g firebase-tools\n\n\n\n\n\n\nMyfirebase installer\n, \nnpm install -g myfirebase-cli\n\n\n\n\n\n\nInstalling Myfirebase\n\n\n# Create new project with myfirebase-cli\n\n$ myfirebase my-project\n\n\n# Change directory\n\n\ncd\n myfirebase\n\n\n# Install dependencies\n\nnpm install\n\n\n# Sign in using your Google account\n\nfirebase login\n\n\n# Initialize firebase project\n\nfirebase init\n\n\n\n\n\nRun dev server\n\n\n# Run the server\n\nnpm run dev\n\n\n\n\n\nProduction\n\n\n# Production\n\nnpm run build\n\n\n\n\n\nDeploy your project\n\n\n# Deploy project\n\nfirebase deploy\n\n\n\n\n\nCongratulations\n\n\n\n\nCongratulations\n\n\nYou've installed \nMyfirebase\n correctly, now let's dive right in to this framework directory to see what's going on, \nDirectory Structure\n.", 
+            "text": "Prerequisites\n\n\n\n\nNPM\n is the recommended installation method when building large scale applications with \nMyfirebase\n.\n\n\n\n\nIf this is the first time you want to give \nnpm\n a shot, don't worry, we got exactly what you need.\n\n\n\n\n\n\nHow to Install Node.js and NPM on Windows\n\n\n\n\n\n\nHow to Install Node.js and NPM on a Mac\n\n\n\n\n\n\nHow to Install Node.js and NPM on a Linux\n\n\n\n\n\n\nFirebase command line interface\n, \nnpm install -g firebase-tools\n\n\n\n\n\n\nMyfirebase installer\n, \nnpm install -g myfirebase-cli\n\n\n\n\n\n\nInstalling Myfirebase\n\n\n# Create new project with myfirebase-cli\n\n$ myfirebase my-project\n\n\n# Change directory\n\n$ \ncd\n myfirebase\n\n\n# Install dependencies\n\n$ npm install\n\n\n# Sign in using your Google account\n\n$ firebase login\n\n\n# Initialize firebase project\n\n$ firebase init\n\n\n\n\n\nRun dev server\n\n\n# Run the server\n\n$ npm run dev\n\n\n\n\n\nProduction\n\n\n# Production\n\n$ npm run build\n\n\n\n\n\nDeploy your project\n\n\n# Deploy project\n\n$ firebase deploy\n\n\n\n\n\nCongratulations\n\n\n\n\nCongratulations\n\n\nYou've installed \nMyfirebase\n correctly, now let's dive right in to this framework directory to see what's going on, \nDirectory Structure\n.", 
             "title": "Installation"
         }, 
         {
@@ -17,22 +17,22 @@
         }, 
         {
             "location": "/installation/#installing-myfirebase", 
-            "text": "# Create new project with myfirebase-cli \n$ myfirebase my-project # Change directory  cd  myfirebase # Install dependencies \nnpm install # Sign in using your Google account \nfirebase login # Initialize firebase project \nfirebase init", 
+            "text": "# Create new project with myfirebase-cli \n$ myfirebase my-project # Change directory \n$  cd  myfirebase # Install dependencies \n$ npm install # Sign in using your Google account \n$ firebase login # Initialize firebase project \n$ firebase init", 
             "title": "Installing Myfirebase"
         }, 
         {
             "location": "/installation/#run-dev-server", 
-            "text": "# Run the server \nnpm run dev", 
+            "text": "# Run the server \n$ npm run dev", 
             "title": "Run dev server"
         }, 
         {
             "location": "/installation/#production", 
-            "text": "# Production \nnpm run build", 
+            "text": "# Production \n$ npm run build", 
             "title": "Production"
         }, 
         {
             "location": "/installation/#deploy-your-project", 
-            "text": "# Deploy project \nfirebase deploy", 
+            "text": "# Deploy project \n$ firebase deploy", 
             "title": "Deploy your project"
         }, 
         {
@@ -249,6 +249,21 @@
             "location": "/storage/#example_2", 
             "text": "template \n     div   class  =   container \n         button   @ click = delete() Delete photo / button \n     / div  / template  script \n     export   default   { \n         data ()   { \n             return   { \n                 file :   image/file.png \n             } \n         }, \n         methods :   { \n             delete ()   { \n                 this . $storage . delete ({ \n                     ref :   this . file , \n                     result :   ()   =   { \n                         console . log ( Deleted ) \n                     }, \n                     error :   ( error )   =   { \n                         console . log ( error . message ) \n                     } \n                 }) \n             } \n         } \n     }  / script", 
             "title": "Example"
+        }, 
+        {
+            "location": "/cloudfunctions/", 
+            "text": "Firebase Cloud functions docs\n\n\nPlease check the firebase cloud functions \ndocs\n.\n\n\n\n\nBasically, Myfirebase comes with \n/functions\n directory where you could define and organize your functions and deploy them easily.\n\n\nFunctions directory houses index.js, package.json and node modules, so you can organize and structure this directory however you like.\n\n\nGetting started\n\n\n# move to functions directory.\n\n$ \ncd\n functions\n\n\n# install dependencies.\n\n$ npm install\n\n\n\n\n\nBy defualt, index.js comes with an example of sending a push notification after \nonWrite\n event.\n\n\n// index.js\n\n\n\n// require firebase-functions.\n\n\nvar\n \nfunctions\n \n=\n \nrequire\n(\nfirebase-functions\n);\n\n\n// require firebase-admin.\n\n\nvar\n \nadmin\n \n=\n \nrequire\n(\nfirebase-admin\n)\n\n\n// initialize firebase app.\n\n\nadmin\n.\ninitializeApp\n(\nfunctions\n.\nconfig\n().\nfirebase\n);\n\n\n// export sendMessageNotification as a function. \n\n\nexports\n.\nsendMessageNotification\n \n=\n \nfunctions\n.\ndatabase\n.\nref\n(\ndata/{messageID}\n).\nonWrite\n(\nevent\n \n=\n \n{\n\n    \nif\n \n(\nevent\n.\ndata\n.\nprevious\n.\nexists\n())\n \n{\n\n        \nreturn\n;\n\n    \n}\n\n    \n// get data.\n\n    \nadmin\n.\ndatabase\n().\nref\n(\ndata\n).\nchild\n(\nevent\n.\nparams\n.\nmessageID\n).\nonce\n(\nvalue\n).\nthen\n(\nfunction\n(\nsnap\n)\n \n{\n\n        \n// retrieve meassage\n\n        \nvar\n \nmessageData\n \n=\n \nsnap\n.\nval\n();\n\n        \n// retrieve token\n\n        \nvar\n \ntopic\n \n=\n \nmessageData\n.\ntoken\n;\n\n        \n// define payload.\n\n        \nvar\n \npayload\n \n=\n \n{\n\n            \nnotification\n:\n \n{\n\n                \ntitle\n:\n \nYou got a new Message\n,\n\n                \nbody\n:\n \nmessageData\n.\ndata\n,\n\n                \nicon\n:\n \nhttps://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-128.png\n\n            \n}\n\n        \n};\n\n        \n// send push notification.\n\n        \nadmin\n.\nmessaging\n().\nsendToDevice\n(\ntopic\n,\n \npayload\n)\n\n            \n.\nthen\n(\nfunction\n(\nresponse\n)\n \n{\n\n                \nconsole\n.\nlog\n(\nSuccessfully sent message:\n,\n \nresponse\n);\n\n            \n})\n\n            \n.\ncatch\n(\nfunction\n(\nerror\n)\n \n{\n\n                \nconsole\n.\nlog\n(\nError sending message:\n,\n \nerror\n);\n\n            \n});\n\n    \n});\n\n\n});\n\n\n\n\n\n\nAs you can see it's easy to write functions with firebase cloud functions.\n\n\n\n\nFirebase cloude messaging\n\n\nThis example of sending push notification requires to register a service-worker through client site (browser) which is already defined in this project.", 
+            "title": "Cloud Functions"
+        }, 
+        {
+            "location": "/cloudfunctions/#getting-started", 
+            "text": "# move to functions directory. \n$  cd  functions # install dependencies. \n$ npm install  By defualt, index.js comes with an example of sending a push notification after  onWrite  event.  // index.js  // require firebase-functions.  var   functions   =   require ( firebase-functions );  // require firebase-admin.  var   admin   =   require ( firebase-admin )  // initialize firebase app.  admin . initializeApp ( functions . config (). firebase );  // export sendMessageNotification as a function.   exports . sendMessageNotification   =   functions . database . ref ( data/{messageID} ). onWrite ( event   =   { \n     if   ( event . data . previous . exists ())   { \n         return ; \n     } \n     // get data. \n     admin . database (). ref ( data ). child ( event . params . messageID ). once ( value ). then ( function ( snap )   { \n         // retrieve meassage \n         var   messageData   =   snap . val (); \n         // retrieve token \n         var   topic   =   messageData . token ; \n         // define payload. \n         var   payload   =   { \n             notification :   { \n                 title :   You got a new Message , \n                 body :   messageData . data , \n                 icon :   https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-128.png \n             } \n         }; \n         // send push notification. \n         admin . messaging (). sendToDevice ( topic ,   payload ) \n             . then ( function ( response )   { \n                 console . log ( Successfully sent message: ,   response ); \n             }) \n             . catch ( function ( error )   { \n                 console . log ( Error sending message: ,   error ); \n             }); \n     });  });   As you can see it's easy to write functions with firebase cloud functions.   Firebase cloude messaging  This example of sending push notification requires to register a service-worker through client site (browser) which is already defined in this project.", 
+            "title": "Getting started"
+        }, 
+        {
+            "location": "/cloudmessaging/", 
+            "text": "", 
+            "title": "Cloud Messaging"
         }
     ]
 }
