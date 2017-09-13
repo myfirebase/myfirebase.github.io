@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-09-09</lastmod>
+     <lastmod>2017-09-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,13 @@
         
     <url>
      <loc>/installation/</loc>
-     <lastmod>2017-09-09</lastmod>
+     <lastmod>2017-09-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/directory-structure/</loc>
-     <lastmod>2017-09-09</lastmod>
+     <lastmod>2017-09-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,25 +29,25 @@
         
     <url>
      <loc>/authentication/</loc>
-     <lastmod>2017-09-09</lastmod>
+     <lastmod>2017-09-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/storage/</loc>
-     <lastmod>2017-09-09</lastmod>
+     <lastmod>2017-09-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/cloudfunctions/</loc>
-     <lastmod>2017-09-09</lastmod>
+     <loc>/cloud-functions/</loc>
+     <lastmod>2017-09-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/cloudmessaging/</loc>
-     <lastmod>2017-09-09</lastmod>
+     <loc>/cloud-messaging/</loc>
+     <lastmod>2017-09-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
