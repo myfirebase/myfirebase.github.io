@@ -247,18 +247,114 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      The Basics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        The Basics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../components/" title="Components" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../routing/" title="Routing" class="md-nav__link">
+      Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../store/" title="State Managment System" class="md-nav__link">
+      State Managment System
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Managing SCSS/SASS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Managing SCSS/SASS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../style/" title="Material design and SASS/SCSS" class="md-nav__link">
+      Material design and SASS/SCSS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-5">
       Functionalities
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-5">
         Functionalities
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -528,6 +624,54 @@
   <li class="md-nav__item">
     <a href="../cloud-messaging/" title="Cloud Messaging" class="md-nav__link">
       Cloud Messaging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep Dive
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep Dive
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../global-guard/" title="Middlewares (Global Navigation guards)" class="md-nav__link">
+      Middlewares (Global Navigation guards)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../admin/" title="Firebase Admin (Feature request)" class="md-nav__link">
+      Firebase Admin (Feature request)
     </a>
   </li>
 
@@ -843,33 +987,33 @@
 <p>Syntax : <code>$auth.updateProfilePicture(object)</code></p>
 <h5 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-    export default {
-        mounted () {
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+        <span class="nx">mounted</span> <span class="p">()</span> <span class="p">{</span>
 
-        },
-        data () {
-            return {
-                // link to profile photo
-                picture: &#39;https://link-to-photo.test/profile.png&#39;
-            }
-        },
-        methods:{
-            // update profile picture
-            updateProfilePicture() {
-                this.$auth.updateProfilePicture({
-                    // picture link
-                    ref: this.picture,
-                    result: () =&gt; {
-                        //updated
-                    },
-                    error: (error) =&gt; {
-                        console.log(error.message)
-                    }
-                })
-            }
-        }
-    }
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">},</span>
+        <span class="nx">data</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="c1">// link to profile photo</span>
+                <span class="nx">picture</span><span class="o">:</span> <span class="s1">&#39;https://link-to-photo.test/profile.png&#39;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
+            <span class="c1">// update profile picture</span>
+            <span class="nx">updateProfilePicture</span><span class="p">()</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">$auth</span><span class="p">.</span><span class="nx">updateProfilePicture</span><span class="p">({</span>
+                    <span class="c1">// picture link</span>
+                    <span class="nx">ref</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">picture</span><span class="p">,</span>
+                    <span class="nx">result</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="c1">//updated</span>
+                    <span class="p">},</span>
+                    <span class="nx">error</span><span class="o">:</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">})</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 
 
@@ -1152,7 +1296,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../directory-structure/" title="Directory Structure" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../style/" title="Material design and SASS/SCSS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1161,7 +1305,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Directory Structure
+                Material design and SASS/SCSS
               </span>
             </div>
           </a>
