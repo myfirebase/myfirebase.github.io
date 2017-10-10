@@ -496,10 +496,10 @@
                 
                   <h1>Components</h1>
                 
-                <p>Components contain your HTML rendred by your application and houses scripts and stylessheets that belogs to that component located in the <code>/src/components/</code> directory.</p>
-<p>Myfirebase used VueJs templates components, with single component concept that provide sepation of concerns.</p>
-<p>Typicaly, to create a new component you could run <code>new:component command</code> in your terminal.</p>
-<p><code>myfirebase new:component &lt;component-name&gt;</code>, the Myfirebase-CLI will generate a new component template and put it inside your application <code>/src/components/&lt;component-name&gt;.vue</code>.</p>
+                <p>At a high level, components are custom elements that Vue compiler would attach specified behavior to. They contain your HTML, scripts and stylesheets at the same time in one file. </p>
+<p>They are located in the <code>/src/components/</code> directory.</p>
+<p>To create a new component you could run <code>new:component command</code> in your terminal.</p>
+<p><code>myfirebase new:component &lt;component-name&gt;</code>, the Myfirebase-CLI will generate a new component and put it inside your application <code>/src/components/&lt;component-name&gt;.vue</code>.</p>
 <p>A simple component might look something like this:</p>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
@@ -515,7 +515,7 @@
     <span class="p">},</span>
     <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="p">{</span>
-            <span class="nx">hello</span><span class="o">:</span> <span class="s1">&#39;Hello myfirebase&#39;</span>
+            <span class="nx">hello</span><span class="o">:</span> <span class="s1">&#39;Hello Myfirebase&#39;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -523,7 +523,7 @@
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span>
-<span class="c">/*Stylesheet*/</span>
+    <span class="c">/** My Styles **/</span>
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </pre></div>
                 
