@@ -671,9 +671,9 @@
                 
                 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>It's recommended to take a look at the firebase storage docs, please check <a href="https://firebase.google.com/docs/storage/web/start">firebase storage docs</a>.</p>
+<p>It's recommended to take a look at the firebase storage docs, please check the following link <a href="https://firebase.google.com/docs/storage/web/start">firebase storage docs</a>.</p>
 </div>
-<p>Myfirebase provides a simple way to interact with firebase storage via a global instance called <code>$sotrage</code>.</p>
+<p>Myfirebase provides a simple way to interact with firebase storage via a global instance called <code>$storage</code>.</p>
 <h4 id="myfirebase-storage-instance">Myfirebase Storage instance<a class="headerlink" href="#myfirebase-storage-instance" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$storage</code></p>
 <p><code>$auth</code> is a global auth instance which called through Vue component.</p>
@@ -681,12 +681,12 @@
 
 <h4 id="get-firebase-storage-instance">Get firebase storage instance<a class="headerlink" href="#get-firebase-storage-instance" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$storage.get()</code></p>
-<p>You can retreive firebase storage object usign <code>get()</code> method.</p>
+<p>You can retrieve firebase storage object using <code>get()</code> method.</p>
 <hr>
 
 <h4 id="get-file-url">Get File URL<a class="headerlink" href="#get-file-url" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$storage.getDownloadURL(object)</code></p>
-<p>You can get your file URL such like user avatar or document which stored through firebase storage using <code>getDownloadURL</code>.</p>
+<p>You can get your file URL of the user avatar or document which stored through firebase storage using <code>getDownloadURL</code>.</p>
 <h5 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
@@ -721,9 +721,9 @@
 
 <h4 id="upload-file">Upload file<a class="headerlink" href="#upload-file" title="Permanent link">&para;</a></h4>
 <p>Sytax : <code>$storage.upload(object)</code></p>
-<p>You can upload a file to firebase storage usign <code>upload(object)</code>.</p>
+<p>You can upload a file to firebase cloud storage using <code>upload(object)</code>.</p>
 <h5 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h5>
-<p>We are going to upload a new file to the server usign upload method.</p>
+<p>We are going to upload a new file to the server using upload method.</p>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default&quot;</span><span class="p">&gt;</span>
@@ -776,7 +776,7 @@
 <p>Syntax : <code>$storage.delete(string)</code></p>
 <p>You can delete a file with <code>delete</code> method specifying the file path.</p>
 <blockquote>
-<p>file path is a storage path where the concerned file is located.</p>
+<p>The file's path is a storage path where the concerned file is located.</p>
 </blockquote>
 <h5 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
