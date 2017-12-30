@@ -544,19 +544,22 @@
 <p>By default, Myfirebase has some default routes already defined in <code>routes.js</code> file.</p>
 <ul>
 <li>
-<p>Landing component: which is the parent of all other components.</p>
+<p>Layout.vue: which is the default layout of our application.</p>
 </li>
 <li>
-<p>Welcome component: which is a default landing component.</p>
+<p>Welcome.vue: which is a default welcoming component.</p>
 </li>
 <li>
-<p>Login component: which is responsible for authenticating users (register/login/logout) using firebase authentication.</p>
+<p>Login.vue: which is responsible for authenticating users (register/login/logout) using firebase authentication.</p>
 </li>
 <li>
-<p>UpdateProfile: which is responsible for updating user profile (email/password) and user avatar using firebase cloud storage.</p>
+<p>UpdateProfile.vue: which is responsible for updating user profile (email/password) and user avatar using firebase cloud storage.</p>
 </li>
 <li>
-<p>App component: which is a default app example to create/read data to the firebase database.</p>
+<p>App.vue: which is the default component to start playing with the firebase database.</p>
+</li>
+<li>
+<p>Firestore.vue: which is the default component to start playing with the cloud firestore.</p>
 </li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="nx">Landing</span> <span class="nx">from</span> <span class="s1">&#39;@/components/Landing&#39;</span>
@@ -564,6 +567,7 @@
 <span class="kr">import</span> <span class="nx">Login</span> <span class="nx">from</span> <span class="s1">&#39;@/components/auth/Login&#39;</span>
 <span class="kr">import</span> <span class="nx">UpdateProfile</span> <span class="nx">from</span> <span class="s1">&#39;@/components/auth/UpdateProfile&#39;</span>
 <span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;@/components/App&#39;</span>
+<span class="kr">import</span> <span class="nx">Firestore</span> <span class="nx">from</span> <span class="s2">&quot;@/components/Firestore&quot;</span>
 
 <span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
 
@@ -592,6 +596,14 @@
                 <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/app&#39;</span><span class="p">,</span>
                 <span class="nx">component</span><span class="o">:</span> <span class="nx">App</span><span class="p">,</span>
                 <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Main app&#39;</span><span class="p">,</span>
+                <span class="nx">meta</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="nx">auth</span><span class="o">:</span> <span class="kc">true</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/firestore&#39;</span><span class="p">,</span>
+                <span class="nx">component</span><span class="o">:</span> <span class="nx">Firestore</span><span class="p">.</span>
+                <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;firestore&#39;</span><span class="p">,</span>
                 <span class="nx">meta</span><span class="o">:</span> <span class="p">{</span>
                     <span class="nx">auth</span><span class="o">:</span> <span class="kc">true</span>
                 <span class="p">}</span>

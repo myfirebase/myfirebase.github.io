@@ -913,9 +913,9 @@
                 
                 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>It's recommended to take a look at the firebase authentication docs, please check <a href="https://firebase.google.com/docs/auth/web/start">firebase auth docs</a>.</p>
+<p>It's recommended to take a look at the firebase authentication docs, please check the following link<a href="https://firebase.google.com/docs/auth/web/start">firebase auth docs</a>.</p>
 </div>
-<p>How hard it is to integrate <strong>Firebase auth</strong> to your web project especially when you try to structure and orginize firebase auth globally to be used through all <strong>Vue components</strong>.</p>
+<p>How hard it is to integrate <strong>Firebase auth</strong> to your web project especially when you try to structure and organize firebase auth globally to be used through all <strong>Vue components</strong>.</p>
 <p>Thanks to <strong>Myfirebase auth system</strong> which makes firebase auth easier to be managed using <strong>Vuex</strong>, the fireabse auth is injected and triggered at beginning of the Vue instance.</p>
 <hr>
 
@@ -979,7 +979,7 @@
 <hr>
 
 <h4 id="update-profile-picture">Update Profile Picture<a class="headerlink" href="#update-profile-picture" title="Permanent link">&para;</a></h4>
-<p>You can update profile pricture usign <code>updateProfilePicture(object)</code> method, this will update the default firebase user <strong>profileURL</strong>.</p>
+<p>You can update profile avatar usign <code>updateProfilePicture(object)</code> method, this will update the default firebase user <strong>profileURL</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Before you start updating profile picture, make sure that you have uploaded that picture to firebase storage, and get photoURL, see <a href="">Upload a file with Myfirebase</a>.</p>
@@ -1021,7 +1021,7 @@
 
 <h4 id="auth-state">Auth state<a class="headerlink" href="#auth-state" title="Permanent link">&para;</a></h4>
 <p>Syntax : <code>$auth.state(object)</code></p>
-<p>Consider it just like a auth middleware where you can check if the user is signed in or not, you can also redirect user to an other component if he doesn't signed in.</p>
+<p>Consider it just like an auth middleware where you can check if the user is signed in or not, you can also redirect the user to another component if he doesn't sign in.</p>
 <h5 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
@@ -1058,7 +1058,7 @@
 <hr>
 
 <h4 id="auth-check">Auth check<a class="headerlink" href="#auth-check" title="Permanent link">&para;</a></h4>
-<p>Just like <strong>auth state</strong> but without redirection.</p>
+<p>It's the same as <strong>auth state</strong> but without redirection.</p>
 <p>Syntax : <code>$auth.check(object)</code></p>
 <h5 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
@@ -1155,7 +1155,7 @@
 <hr>
 
 <h4 id="signin-with-email-and-password">SignIn with email and password<a class="headerlink" href="#signin-with-email-and-password" title="Permanent link">&para;</a></h4>
-<p>To signin a user with email and passowrd.</p>
+<p>To sign in a user with email and passowrd.</p>
 <p>Syntax : <code>$auth.loginWithEmailAndPassword(object)</code></p>
 <h5 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
@@ -1210,7 +1210,7 @@
 <hr>
 
 <h4 id="signin-with-google">SignIn with google<a class="headerlink" href="#signin-with-google" title="Permanent link">&para;</a></h4>
-<p>let your users authenticate with Firebase using their <strong>Google accounts</strong>.</p>
+<p>Allow the users to authenticate to Firebase using their <strong>Google accounts</strong>.</p>
 <p>Syntax : <code>$auth.signInWithGoogle(object)</code></p>
 <h5 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
@@ -1261,17 +1261,17 @@
 <hr>
 
 <h4 id="signin-with-facebook">SignIn with Facebook<a class="headerlink" href="#signin-with-facebook" title="Permanent link">&para;</a></h4>
-<p>To let your users authenticate with Firebase using their <strong>Facebook Accounts</strong>.</p>
+<p>Allow the users to authenticate to Firebase using their <strong>Facebook Accounts</strong>.</p>
 <p>Syntax : <code>$auth.signInWithFacebook(object)</code></p>
 <hr>
 
 <h4 id="signin-with-twitter">SignIn with Twitter<a class="headerlink" href="#signin-with-twitter" title="Permanent link">&para;</a></h4>
-<p>To let your users authenticate with Firebase using their <strong>Twitter Accounts</strong>.</p>
+<p>Allow the users to authenticate to Firebase using their <strong>Twitter Accounts</strong>.</p>
 <p>Syntax : <code>$auth.signInWithTwitter(object)</code></p>
 <hr>
 
 <h4 id="signin-with-github">SignIn with Github<a class="headerlink" href="#signin-with-github" title="Permanent link">&para;</a></h4>
-<p>To let your users authenticate with Firebase using their <strong>Github Accounts</strong>.</p>
+<p>Allow the users to authenticate to Firebase using their <strong>Github Accounts</strong>.</p>
 <p>Syntax : <code>$auth.signInWithGithub(object)</code></p>
 <hr>
 
