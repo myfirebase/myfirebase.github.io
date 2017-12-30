@@ -535,7 +535,7 @@
                 
                   <h1>Cloud Messaging</h1>
                 
-                <p>Firebase cloud messaging is powerful tool that provide a simple mechanism to deliver push notifications easily to your android, IOS or web applications.</p>
+                <p>Firebase cloud messaging is a powerful tool that provides a simple mechanism to deliver push notifications easily to your Android, IOS or web applications.</p>
 <div class="admonition tip">
 <p class="admonition-title">Firebase Cloud Messaging</p>
 <p>Please check FCM <a href="https://firebase.google.com/docs/cloud-messaging/">docs</a></p>
@@ -550,23 +550,22 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The FCM SDK is supported only in pages served over HTTPS, due to its use of service workers which are available only on HTTPS sites, Thanks to firebase hosting wich provide free hosting for your web application served under HTTPS, Sending messages from the Firebase console is not supported.</p>
+<p>The FCM SDK is supported only in pages served over HTTPS, due to its use of service workers which are available only on HTTPS sites, Thanks to firebase hosting which provide free hosting for your web application served under HTTPS, Sending messages from the Firebase console is not supported.</p>
 </div>
 <p>To get started with FCM in your project, you have to add your <code>messagingSenderId</code> in <code>firebase-messaging-sw.js</code> which is located in public directory.</p>
-<div class="codehilite"><pre><span></span><span class="c1">// Give the service worker access to Firebase Messaging.</span>
+<div class="codehilite"><pre><span></span><span class="c1">// Give permission to the service worker.</span>
 <span class="c1">// Note that you can only use Firebase Messaging here, other Firebase libraries</span>
 <span class="c1">// are not available in the service worker.</span>
 <span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js&#39;</span><span class="p">);</span>
 <span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;https://www.gstatic.com/firebasejs/3.9.0/firebase-messaging.js&#39;</span><span class="p">);</span>
 
-<span class="c1">// Initialize the Firebase app in the service worker by passing in the</span>
-<span class="c1">// messagingSenderId.</span>
+<span class="c1">// Initialize the Firebase app into the service worker with the senderID.</span>
 <span class="nx">firebase</span><span class="p">.</span><span class="nx">initializeApp</span><span class="p">({</span>
     <span class="s1">&#39;messagingSenderId&#39;</span><span class="o">:</span> <span class="s1">&#39;Your-sender-id&#39;</span>
 <span class="p">});</span>
 <span class="kr">const</span> <span class="nx">messaging</span> <span class="o">=</span> <span class="nx">firebase</span><span class="p">.</span><span class="nx">messaging</span><span class="p">();</span>
 
-<span class="c1">// Retrieve an instance of Firebase Messaging so that it can handle background</span>
+<span class="c1">// Retreive an instance of Firebase Messaging so we can handle the background</span>
 <span class="c1">// messages.</span>
 <span class="nx">messaging</span><span class="p">.</span><span class="nx">setBackgroundMessageHandler</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">payload</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Customize notification here</span>
@@ -575,7 +574,7 @@
 
 
 <p>This service worker will handle notification messages even in the background when the user is not opening the browser.</p>
-<p>To send a notification messages to client you could write your logic through firebase cloud fucntions, we already have an example, check the following link <a href="../cloud-functions/">Cloud functions</a>.</p>
+<p>To send a notification message to a client you could write your logic through a single firebase cloud function, we already have an example, check the following link <a href="../cloud-functions/">Cloud functions</a>.</p>
                 
                   
                 
