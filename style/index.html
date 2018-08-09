@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -10,9 +13,26 @@
       
       
       
-        <link rel="shortcut icon" href="../img/favicon.ico">
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
     
     
       
@@ -20,17 +40,17 @@
       
     
     
-      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/application-1fcf5138d0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
       
     
     
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -40,66 +60,90 @@
     
   </head>
   
-  
-  
-  
-    <body>
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#define-global-styles" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <a href=".." title="Myfirebase docs" class="md-logo md-header-nav__button">
-            <img src="../img/MyFireBase.png" width="24" height="24">
-          </a>
-        
+        <a href=".." title="Myfirebase docs" class="md-header-nav__button md-logo">
+          
+            <img src="../images/MyFireBase.svg" width="24" height="24">
+          
+        </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Managing SCSS/SASS
-                </span>
-              
+              <span class="md-header-nav__topic">
+                Myfirebase docs
+              </span>
+              <span class="md-header-nav__topic">
+                Material design and SASS/SCSS
+              </span>
             
-            Material design and SASS/SCSS
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner">
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -108,6 +152,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -119,7 +164,7 @@
   
 
 
-  <a href="https://github.com/myfirebase/myfirebase" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/myfirebase/myfirebase/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -141,6 +186,108 @@
     
     <div class="md-container">
       
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Welcome" class="md-tabs__link">
+        Welcome
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../installation/" title="Getting Started" class="md-tabs__link">
+          Getting Started
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../components/" title="The Basics" class="md-tabs__link">
+          The Basics
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../database/" title="Database" class="md-tabs__link">
+          Database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Managing SCSS/SASS" class="md-tabs__link md-tabs__link--active">
+          Managing SCSS/SASS
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../authentication/" title="Functionalities" class="md-tabs__link">
+          Functionalities
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../global-guard/" title="Deep Dive" class="md-tabs__link">
+          Deep Dive
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
       
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
@@ -151,11 +298,11 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-logo md-nav__button">
-        <img src="../img/MyFireBase.png">
-      </i>
-    
+    <span class="md-nav__button md-logo">
+      
+        <img src="../images/MyFireBase.svg" width="48" height="48">
+      
+    </span>
     Myfirebase docs
   </label>
   
@@ -166,7 +313,7 @@
   
 
 
-  <a href="https://github.com/myfirebase/myfirebase" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/myfirebase/myfirebase/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -307,18 +454,54 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../database/" title="Realtime Database and Cloud Firestore" class="md-nav__link">
+      Realtime Database and Cloud Firestore
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Managing SCSS/SASS
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Managing SCSS/SASS
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -361,6 +544,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -380,13 +565,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Functionalities
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Functionalities
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -452,13 +637,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       Deep Dive
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         Deep Dive
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -520,6 +705,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -532,38 +719,15 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/myfirebase/myfirebase/edit/master/docs/style.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
                 
                   <h1>Material design and SASS/SCSS</h1>
                 
-                <p>Myfirebase ships with the <a href="http://vuematerial.io">vue-material</a> to build well-crafted apps with Material Design and Vue 2, that makes working with material-design and JavaScript a joy.</p>
-<p>By default, vue-material is already integrated into this project, you can specify your favorite theme color in <code>/src/main.js</code></p>
-<div class="codehilite"><pre><span></span><span class="p">...</span>
-
-<span class="c1">// Default</span>
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">material</span><span class="p">.</span><span class="nx">registerTheme</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">primary</span><span class="o">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
-    <span class="nx">accent</span><span class="o">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
-    <span class="nx">warn</span><span class="o">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span>
-    <span class="nx">background</span><span class="o">:</span> <span class="s1">&#39;white&#39;</span>
-<span class="p">})</span>
-
-<span class="c1">// Login</span>
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">material</span><span class="p">.</span><span class="nx">registerTheme</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">primary</span><span class="o">:</span> <span class="s1">&#39;indigo&#39;</span><span class="p">,</span>
-    <span class="nx">accent</span><span class="o">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
-    <span class="nx">warn</span><span class="o">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-    <span class="nx">background</span><span class="o">:</span> <span class="s1">&#39;white&#39;</span>
-<span class="p">})</span>
-
-<span class="p">...</span>
-</pre></div>
-
-
+                <p>Myfirebase ships with the <a href="https://vuetifyjs.com">Vuetify</a> to build well-crafted apps with Material Design and Vue 2, that makes working with material-design and JavaScript a joy.</p>
 <h4 id="define-global-styles">Define global styles<a class="headerlink" href="#define-global-styles" title="Permanent link">&para;</a></h4>
-<p>As you may know, Myfrebase has a default SASS/SCSS file located in <code>/src/assets/sass/app.scss</code>, this file contains all vue-material SASS dependencies, you're free to choose whatever you want to work with, this file is compiled down via webpack automatically and injecting it into <code>index.html</code> while running <code>npm run build</code> or <code>npm run dev</code>.</p>
-<div class="codehilite"><pre><span></span><span class="c">/* app.scss */</span>
-
-<span class="c">/* Fonts */</span>
+<p>As you may know, Myfrebase has a default SASS/SCSS file located in <code>/src/assets/sass/app.scss</code>, this file contains all <strong>Vuetify</strong> SASS dependencies, you're free to choose whatever you want to work with, this file is compiled down via webpack automatically and injected into <code>index.html</code> while running <code>npm run build</code> or <code>npm run dev</code>.</p>
+<div class="codehilite"><pre><span></span><span class="c">/* Fonts */</span>
 
 <span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="nt">https</span><span class="o">://</span><span class="nt">fonts</span><span class="p">.</span><span class="nc">googleapis</span><span class="p">.</span><span class="nc">com</span><span class="o">/</span><span class="nt">icon</span><span class="o">?</span><span class="nt">family</span><span class="o">=</span><span class="nt">Material</span><span class="o">+</span><span class="nt">Icons</span><span class="o">)</span><span class="p">;</span>
 
@@ -573,33 +737,15 @@
 <span class="c">/* @import &quot;variables&quot;; */</span>
 
 
-<span class="c">/*VueMaterial css*/</span>
+<span class="c">/* Vuetify css*/</span>
 
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdAvatar/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdBackdrop/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdButton/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdCard/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdCore/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdIcon/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdLayout/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdList/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdMenu/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdSelect/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdSidenav/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdSpeedDial/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdSubheader/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdTabs/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdToolbar/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdWhiteframe/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdSwitch/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdInputContainer/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdSnackbar/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdDialog/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdTable/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdSpinner/index.css&#39;</span><span class="p">;</span>
-<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vue-material/dist/components/mdFile/index.css&#39;</span><span class="p">;</span>
+<span class="p">@</span><span class="k">import</span> <span class="s1">&#39;~vuetify/dist/vuetify.css&#39;</span><span class="p">;</span>
 
 <span class="c">/*Global css*/</span>
+
+<span class="p">.</span><span class="nc">push-down</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
 
 <span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
     <span class="k">margin-top</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
@@ -638,6 +784,8 @@
               
               
                 
+
+
               
             </article>
           </div>
@@ -650,7 +798,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../store/" title="State Managment System" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../database/" title="Realtime Database and Cloud Firestore" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -659,7 +807,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                State Managment System
+                Realtime Database and Cloud Firestore
               </span>
             </div>
           </a>
@@ -687,9 +835,9 @@
       <div class="md-footer-copyright">
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -701,10 +849,9 @@
       
     </div>
     
-      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      <script src="../assets/javascripts/application.0cf9b500.js"></script>
       
-      
-      <script>app.initialize({url:{base:".."}})</script>
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
       
     
     

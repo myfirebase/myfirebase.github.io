@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,13 @@
         
     <url>
      <loc>/installation/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/directory-structure/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,19 +29,29 @@
         
     <url>
      <loc>/components/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/routing/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/store/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/database/</loc>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -51,7 +61,7 @@
         
     <url>
      <loc>/style/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -61,25 +71,25 @@
         
     <url>
      <loc>/authentication/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/storage/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/cloud-functions/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/cloud-messaging/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -89,13 +99,13 @@
         
     <url>
      <loc>/global-guard/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin/</loc>
-     <lastmod>2017-12-30</lastmod>
+     <lastmod>2018-08-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
